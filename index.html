@@ -176,8 +176,14 @@
           <p class="swipe-status" role="status"></p>
         </div>
         <figure class="shot" style="margin-top:32px">
-          <div class="frame"><img src="assets/img/shots/bugun.webp" width="600" height="1298" loading="lazy" decoding="async" alt="Uygulamanın Bugün ekranı: Kıvı, dört çıtalı Ocak ve sıradaki görev Su İç."></div>
-          <figcaption>Uygulamadan ekran görüntüsü, örnek veri.</figcaption>
+          <div class="frame">
+            <video class="loop-video" muted loop playsinline preload="none" width="600" height="1298" poster="assets/img/shots/dongu-ilk.webp" aria-label="Uygulamadan kayıt: Bugün ekranında sıradaki görev tiklenince Ocak'taki çıta tutuşuyor, seri 38'den 39 güne çıkıyor; iki görev daha tiklenince üç çıta yanıyor.">
+              <source src="assets/video/dongu.mp4" type="video/mp4">
+              <source src="assets/video/dongu.webm" type="video/webm">
+            </video>
+            <button class="loop-toggle" type="button" hidden aria-label="Kaydı oynat"><svg class="ico i-play" aria-hidden="true"><use href="assets/img/ikonlar.svg#i-play"/></svg><svg class="ico i-pause" aria-hidden="true"><use href="assets/img/ikonlar.svg#i-pause"/></svg></button>
+          </div>
+          <figcaption>Uygulamadan kayıt, örnek veri.</figcaption>
         </figure>
       </div>
       <ul class="feat a7">

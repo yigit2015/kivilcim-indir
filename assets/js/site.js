@@ -98,6 +98,38 @@
   }) : null;
   KV.watchLoop = function (el) { if (el && loopIO) loopIO.observe(el); };
 
+  // ── Kayıt döngüsü: görünürken oynar, ekran dışında ve gizli sekmede durur ──
+  // Sade harekette kendiliğinden başlamaz. Düğme her zaman oynatır ya da durdurur; kullanıcının seçimi kalır.
+  var loops = document.querySelectorAll('.loop-video');
+  for (var li = 0; li < loops.length; li++) (function (v) {
+    var btn = v.parentElement.querySelector('.loop-toggle');
+    var inView = !('IntersectionObserver' in window);
+    var userPaused = false;
+    var userPlayed = false;
+    var start = function () { var p = v.play(); if (p && p.catch) p.catch(function () { /* oynatma engellendi: poster kalır */ }); };
+    var update = function () {
+      if (inView && !document.hidden && !userPaused && (!KV.calm || userPlayed)) start();
+      else if (!v.paused) v.pause();
+    };
+    var sync = function () {
+      if (!btn) return;
+      btn.hidden = false;
+      if (v.paused) btn.removeAttribute('data-playing'); else btn.setAttribute('data-playing', '');
+      btn.setAttribute('aria-label', v.paused ? 'Kaydı oynat' : 'Kaydı duraklat');
+    };
+    v.addEventListener('play', sync);
+    v.addEventListener('pause', sync);
+    if (btn) btn.addEventListener('click', function () {
+      if (v.paused) { userPaused = false; userPlayed = true; start(); }
+      else { userPaused = true; userPlayed = false; v.pause(); }
+    });
+    if (!inView) new IntersectionObserver(function (es) { inView = es[es.length - 1].isIntersecting; update(); }, { rootMargin: '120px 0px' }).observe(v);
+    document.addEventListener('visibilitychange', update);
+    KV.onMotion(function () { if (KV.calm) userPlayed = false; update(); });
+    sync();
+    update();
+  })(loops[li]);
+
   // ── İşletim sistemi ───────────────────────────────────────────────────────
   var BASE = 'https://github.com/yigit2015/kivilcim-indir/releases/latest/download/';
   var WEB = 'https://claude.ai/artifact/Xjzge8CMprANM8s2r9yocx';

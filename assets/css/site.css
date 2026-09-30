@@ -559,7 +559,31 @@ html { scrollbar-color: var(--line) var(--bg); }
   background: var(--surface);
   aspect-ratio: 390 / 844;
 }
-.shot img { width: 100%; height: 100%; object-fit: cover; }
+.shot img, .shot video { display: block; width: 100%; height: 100%; object-fit: cover; }
+/* Kayıt döngüsü: görünürken oynar, sade harekette poster kalır; düğme her zaman durdurur ya da oynatır. */
+.loop-toggle {
+  position: absolute;
+  z-index: 4;
+  right: 10px;
+  bottom: 10px;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(20, 20, 22, 0.62);
+  color: #fff;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  transition: transform var(--fast) var(--ease-out), background-color var(--fast) var(--ease-out);
+}
+.loop-toggle:hover { background: rgba(20, 20, 22, 0.8); }
+.loop-toggle:active { transform: scale(0.94); }
+.loop-toggle .ico { width: 18px; height: 18px; }
+.loop-toggle .i-pause, .loop-toggle[data-playing] .i-play { display: none; }
+.loop-toggle[data-playing] .i-pause { display: block; }
 .shot figcaption { margin-top: var(--s3); color: var(--text-faint); font-size: var(--fs-13); }
 .shot-wide { width: 100%; }
 .shot-wide .frame { border-radius: var(--r-md); border-width: 6px; aspect-ratio: 1280 / 820; }
@@ -1598,6 +1622,7 @@ html[data-motion="calm"] .theme-btn .ico { transform: none !important; }
   .glare,
   .fuse-burn,
   .fuse-spark,
+  .loop-toggle,
   .day-line { display: none !important; }
   .dl-band.has-stage { background: var(--stage); }
   [style] { opacity: 1 !important; transform: none !important; translate: none !important; }
@@ -1606,8 +1631,10 @@ html[data-motion="calm"] .theme-btn .ico { transform: none !important; }
 @media (prefers-reduced-transparency: reduce) {
   .bar,
   .hearth { -webkit-backdrop-filter: none; backdrop-filter: none; background: var(--glass-solid); }
+  .loop-toggle { -webkit-backdrop-filter: none; backdrop-filter: none; background: #141416; }
 }
 @media (forced-colors: active) {
   .btn-primary { border: 1px solid ButtonText; }
+  .loop-toggle { border: 1px solid ButtonText; }
   .cell { forced-color-adjust: none; }
 }

@@ -28,6 +28,28 @@
 
 </div>
 
+## Bir tik, bir çıta
+
+<table>
+  <tr>
+    <td width="300" valign="top">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset=".github/readme/dongu-dark.webp">
+        <img src=".github/readme/dongu-light.webp" width="280" alt="Kıvılcım'ın Bugün ekranı: sıradaki görev tiklenince Ocak'taki çıta tutuşuyor, seri 38'den 39 güne çıkıyor; iki görev daha tiklenince üç çıta yanıyor.">
+      </picture>
+    </td>
+    <td valign="top">
+
+1. **Sıradaki görevi tikle.** Ocak'ın altındaki satır hep sıradaki görevi gösterir; tek dokunuş yeter.
+2. **Çıta tutuşur.** Her görev bir çıta. Tamamladıkça Kıvı'nın altındaki ateş büyür.
+3. **Seri büyür.** Günün ilk tikiyle seri bir gün uzar, hafta şeridinde bugün işaretlenir.
+
+<sub>Uygulamadan kayıt, örnek veri.</sub>
+
+</td>
+  </tr>
+</table>
+
 ## Neler var
 
 <table>
