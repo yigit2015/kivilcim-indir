@@ -128,8 +128,9 @@
   --z-skip: 100;
 }
 
+/* Gündüz: sistem açıksa (elle koyu seçilmediyse) ya da başlıktaki düğmeyle açık seçildiyse. */
 @media (prefers-color-scheme: light) {
-  :root {
+  :root:not([data-theme="dark"]) {
     color-scheme: light;
     /* Gündüz paleti (palettes.ts LIGHT) */
     --stage: #E5E5EA;
@@ -168,6 +169,45 @@
     --heat-4: #9A3E08;
     --stick-unlit: #E5E5EA;
   }
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+  /* Gündüz paleti (palettes.ts LIGHT) */
+  --stage: #E5E5EA;
+  --bg: #F2F2F7;
+  --surface: #FFFFFF;
+  --surface-hi: #EFEFF4;
+  --surface-sunk: #E5E5EA;
+  --line: #C6C6C8;
+  --line-soft: #E5E5EA;
+  --text: #000000;
+  --text-dim: #3C3C43;
+  --text-faint: #63636B;
+  --orange: #E0600A;
+  --on-orange: #141416;
+  --orange-text: #B2490A;
+  --symbol: #B2490A;
+  --amber: #8F5400;
+  --gold: #835609;
+  --blue: #0379B5;
+  --green: #07875A;
+  --warm-1: #FFF4EC;
+  --warm-2: #FFE4D1;
+  --warm-3: #FFC7A0;
+  --ember-deep: rgba(255, 170, 110, 0.35);
+  --glass: rgba(255, 255, 255, 0.72);
+  --glass-line: rgba(0, 0, 0, 0.08);
+  --glass-solid: rgba(255, 255, 255, 0.96);
+  --orange-a12: rgba(224, 96, 10, 0.10);
+  --orange-a28: rgba(224, 96, 10, 0.22);
+  --orange-a45: rgba(224, 96, 10, 0.45);
+  --orange-a75: rgba(224, 96, 10, 0.75);
+  --heat-0: #E5E5EA;
+  --heat-1: #EEA676;
+  --heat-2: #E47A33;
+  --heat-3: #C85608;
+  --heat-4: #9A3E08;
+  --stick-unlit: #E5E5EA;
 }
 
 /* ── Temel ─────────────────────────────────────────────────────────────────── */
@@ -412,6 +452,38 @@ html { scrollbar-color: var(--line) var(--bg); }
   cursor: pointer;
 }
 .menu-btn .ico { width: 18px; height: 18px; }
+/* Tema düğmesi: geçilecek temanın simgesi görünür (gecede güneş, gündüzde ay). */
+.theme-btn {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  transition: transform var(--fast) var(--ease-out);
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+.theme-btn:hover { border-color: var(--orange-a45); }
+.theme-btn:active { transform: scale(0.94); }
+.theme-btn .ico {
+  grid-area: 1 / 1;
+  width: 20px;
+  height: 20px;
+  transition: opacity var(--base) var(--ease-out), transform var(--slow) var(--ease-out);
+}
+.theme-btn .i-moon { opacity: 0; transform: rotate(-90deg) scale(0.6); }
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) .theme-btn .i-sun { opacity: 0; transform: rotate(90deg) scale(0.6); }
+  :root:not([data-theme="dark"]) .theme-btn .i-moon { opacity: 1; transform: none; }
+}
+:root[data-theme="light"] .theme-btn .i-sun { opacity: 0; transform: rotate(90deg) scale(0.6); }
+:root[data-theme="light"] .theme-btn .i-moon { opacity: 1; transform: none; }
 @media (max-width: 899px) {
   .menu-btn { display: inline-flex; }
   .nav {
@@ -854,10 +926,13 @@ html[data-motion="calm"] .journey-mode .ladder { position: static !important; wi
 .seg-4 { background: rgba(255, 201, 77, 0.42); font-size: var(--fs-13); }
 .seg-10 { background: #FFC94D; }
 @media (prefers-color-scheme: light) {
-  .seg-1 { background: rgba(0, 0, 0, 0.06); }
-  .seg-4 { background: rgba(255, 201, 77, 0.6); }
-  .seg-2 { background: rgba(224, 96, 10, 0.22); }
+  :root:not([data-theme="dark"]) .seg-1 { background: rgba(0, 0, 0, 0.06); }
+  :root:not([data-theme="dark"]) .seg-4 { background: rgba(255, 201, 77, 0.6); }
+  :root:not([data-theme="dark"]) .seg-2 { background: rgba(224, 96, 10, 0.22); }
 }
+:root[data-theme="light"] .seg-1 { background: rgba(0, 0, 0, 0.06); }
+:root[data-theme="light"] .seg-4 { background: rgba(255, 201, 77, 0.6); }
+:root[data-theme="light"] .seg-2 { background: rgba(224, 96, 10, 0.22); }
 .x10 { margin-top: var(--s5); text-align: center; color: var(--gold); font-weight: 700; font-size: var(--fs-15); }
 .needle {
   position: absolute;
@@ -1445,6 +1520,11 @@ details > p { padding: 0 var(--s5) var(--s5); color: var(--text-dim); margin: 0;
   .bar { view-transition-name: site-bar; }
   ::view-transition-old(root) { animation: vt-out var(--exit) cubic-bezier(0.55, 0.085, 0.68, 0.53) both; }
   ::view-transition-new(root) { animation: vt-in var(--slow) var(--ease-out) both; }
+  /* Tema değişimi: sayfa kaymaz, yeni renkler eskisinin üstünde yumuşakça belirir (yalnız opacity). */
+  html.theme-vt::view-transition-old(root),
+  html.theme-vt::view-transition-old(site-bar) { animation: none; }
+  html.theme-vt::view-transition-new(root),
+  html.theme-vt::view-transition-new(site-bar) { animation: fade-in var(--slow) var(--ease-out) both; }
 }
 @media (prefers-reduced-motion: no-preference) and (hover: hover) and (pointer: fine) {
   html:not([data-motion="calm"]) .dl-card { transition: transform var(--base) var(--ease-out); }
@@ -1493,6 +1573,10 @@ details > p { padding: 0 var(--s5) var(--s5); color: var(--text-dim); margin: 0;
   .nav a::after,
   .foot-links a::after { transition: none; }
   details[open] > :not(summary) { animation: fade-in var(--base) ease-out; }
+  .theme-btn,
+  .theme-btn .ico { transition: opacity var(--base) ease-out; }
+  .theme-btn:active,
+  .theme-btn .ico { transform: none !important; }
 }
 html[data-motion="calm"] .btn:active,
 html[data-motion="calm"] .btn.is-pressed,
@@ -1502,6 +1586,10 @@ html[data-motion="calm"] summary .ico { transition: none; }
 html[data-motion="calm"] .nav a::after,
 html[data-motion="calm"] .foot-links a::after { transition: none; }
 html[data-motion="calm"] details[open] > :not(summary) { animation: fade-in var(--base) ease-out; }
+html[data-motion="calm"] .theme-btn,
+html[data-motion="calm"] .theme-btn .ico { transition: opacity var(--base) ease-out; }
+html[data-motion="calm"] .theme-btn:active,
+html[data-motion="calm"] .theme-btn .ico { transform: none !important; }
 
 @media print {
   .embers,

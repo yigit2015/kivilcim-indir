@@ -39,6 +39,37 @@
   window.addEventListener('pagereveal', function (e) { if (KV.calm && e.viewTransition) e.viewTransition.skipTransition(); });
   window.addEventListener('pageswap', function (e) { if (KV.calm && e.viewTransition) e.viewTransition.skipTransition(); });
 
+  // ── Tema: ilk açılışta sistem; başlıktaki düğmeyle koyu ya da açık (kaydedilir) ─
+  // Kayıtlı seçim <head>'deki satırda ilk boyamadan önce uygulanır; burada düğme ve adres çubuğu rengi eşitlenir.
+  var THEME_KEY = 'kivilcim-site-theme';
+  var darkMq = window.matchMedia('(prefers-color-scheme: dark)');
+  var metas = document.querySelectorAll('meta[name="theme-color"]');
+  var metaOrig = [];
+  for (var mi = 0; mi < metas.length; mi++) metaOrig.push(metas[mi].getAttribute('content'));
+  var effectiveTheme = function () { return d.getAttribute('data-theme') || (darkMq.matches ? 'dark' : 'light'); };
+  var syncTheme = function () {
+    var chosen = d.getAttribute('data-theme');
+    for (var i = 0; i < metas.length; i++) metas[i].setAttribute('content', chosen ? (chosen === 'dark' ? '#141416' : '#F2F2F7') : metaOrig[i]);
+    var label = effectiveTheme() === 'dark' ? 'Açık temaya geç' : 'Koyu temaya geç';
+    var btns = document.querySelectorAll('[data-theme-toggle]');
+    for (var j = 0; j < btns.length; j++) { btns[j].setAttribute('aria-label', label); btns[j].title = label; }
+  };
+  var setTheme = function (next) {
+    try { window.localStorage.setItem(THEME_KEY, next); } catch (e) { /* depolama kapalı: yalnız bu sayfada */ }
+    var apply = function () { d.setAttribute('data-theme', next); syncTheme(); };
+    if (KV.calm || !document.startViewTransition) { apply(); return; }
+    d.classList.add('theme-vt');
+    var vt = document.startViewTransition(apply);
+    var done = function () { d.classList.remove('theme-vt'); };
+    vt.finished.then(done, done);
+  };
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest && e.target.closest('[data-theme-toggle]');
+    if (t) setTheme(effectiveTheme() === 'dark' ? 'light' : 'dark');
+  });
+  if (darkMq.addEventListener) darkMq.addEventListener('change', syncTheme);
+  syncTheme();
+
   // ── Menü (dar ekran) ──────────────────────────────────────────────────────
   var menuBtn = document.querySelector('.menu-btn');
   var nav = document.getElementById('menu');

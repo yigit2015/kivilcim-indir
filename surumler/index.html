@@ -24,7 +24,7 @@
 <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
 <link rel="preload" href="../assets/fonts/geologica-tr.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/inter-tr.woff2" as="font" type="font/woff2" crossorigin>
-<script>(function(d){try{if(matchMedia('(prefers-reduced-motion: reduce)').matches||localStorage.getItem('kivilcim-site-calm')==='1')return}catch(e){}d.classList.add('intro');window.__kvIntro=setTimeout(function(){d.classList.remove('intro')},2000)})(document.documentElement)</script>
+<script>(function(d){try{var t=localStorage.getItem('kivilcim-site-theme');if(t==='dark'||t==='light')d.setAttribute('data-theme',t)}catch(e){}try{if(matchMedia('(prefers-reduced-motion: reduce)').matches||localStorage.getItem('kivilcim-site-calm')==='1')return}catch(e){}d.classList.add('intro');window.__kvIntro=setTimeout(function(){d.classList.remove('intro')},2000)})(document.documentElement)</script>
 <link rel="stylesheet" href="../assets/css/site.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Kıvılcım","description":"Küçük günlük görevleri büyüyen bir aleve çeviren, oyunlaştırılmış bir alışkanlık uygulaması. Hesap, sunucu, reklam ve satın alma yok.","applicationCategory":"LifestyleApplication","operatingSystem":"Windows 10, Windows 11, macOS, Linux, Android 7+","softwareVersion":"2.5.0","inLanguage":["tr","en"],"url":"https://yigit2015.github.io/kivilcim-indir/","downloadUrl":"https://github.com/yigit2015/kivilcim-indir/releases/latest","releaseNotes":"https://yigit2015.github.io/kivilcim-indir/surumler/","image":"https://yigit2015.github.io/kivilcim-indir/assets/img/og.jpg","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"}}</script>
 <script src="../assets/js/site.js" defer></script>
@@ -44,6 +44,7 @@
         <li><a href="https://github.com/yigit2015/kivilcim-indir"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-github-logo"/></svg>GitHub</a></li>
       </ul>
     </nav>
+    <button class="theme-btn" type="button" data-theme-toggle aria-label="Açık temaya geç"><svg class="ico i-sun" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-sun"/></svg><svg class="ico i-moon" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-moon-stars"/></svg></button>
     <a class="btn btn-primary btn-sm" href="../#indir">İndir</a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-list"/></svg><span>Menü</span></button>
   </div>
