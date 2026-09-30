@@ -1,0 +1,9 @@
+GSAP 3.15.0 (gsap.min.js, ScrollTrigger.min.js, SplitText.min.js)
+https://gsap.com
+
+Copyright 2026, GreenSock. All rights reserved.
+Subject to the terms of the GSAP Standard "no charge" license:
+https://gsap.com/standard-license
+
+Dosyalar npm'deki gsap@3.15.0 paketinin dist klasöründen değiştirilmeden alındı.
+Site bunları kendi alanından sunar; dış istek yoktur.

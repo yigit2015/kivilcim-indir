@@ -33,13 +33,15 @@
   var kivi = $('.kivi-hero');
   var orb = $('.orb');
   var stage = $('.hearth-stage');
+  // Açılış çizelgesi (motion.js) ocak panelini getirirken Kıvı onunla birlikte belirir.
+  var introMs = Math.round((KV.introAt || 0) * 1000);
   if (kivi) {
     if (!calm()) {
       hint(kivi, true);
       kivi.style.transformOrigin = '50% 100%';
-      kivi.animate([{ transform: 'scale(0.9)' }, { transform: 'scale(1)' }], { duration: POP_MS, easing: POP })
+      kivi.animate([{ transform: 'scale(0.9)' }, { transform: 'scale(1)' }], { duration: POP_MS, delay: introMs, easing: POP, fill: 'backwards' })
         .onfinish = function () { hint(kivi, false); };
-      kivi.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 260, easing: EASE_OUT });
+      kivi.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 260, delay: introMs, easing: EASE_OUT, fill: 'backwards' });
       // IntroScene'deki 6 kıvılcım (mobilde 4): yükselir, tek sefer.
       var RISE = [
         { x: 0.14, len: 54, ms: 3600, delay: 0, size: 3 },
@@ -62,7 +64,7 @@
           { transform: 'translateY(180px)', opacity: 0 },
           { transform: 'translateY(150px)', opacity: 1, offset: 0.15 },
           { transform: 'translateY(-20px)', opacity: 0 }
-        ], { duration: p.ms, delay: p.delay, easing: OUT_QUAD, fill: 'both' }).onfinish = function () { r.remove(); };
+        ], { duration: p.ms, delay: p.delay + introMs, easing: OUT_QUAD, fill: 'both' }).onfinish = function () { r.remove(); };
       });
     }
     kivi.classList.add('is-alive');
@@ -227,7 +229,7 @@
     render();
     setGlow();
     // Bölümün %40'ı görününce ilk iki çıta yanar.
-    once(hearth, 0.4, function () { setTimeout(function () { advance(2); }, calm() ? 0 : 450); });
+    once(hearth, 0.4, function () { setTimeout(function () { advance(2); }, calm() ? 0 : 450 + introMs); });
   }
 
   // ── Kaydırma demosu: sağa tamamla, sola jokerle atla ──────────────────────
@@ -319,14 +321,7 @@
     var shownDay = -1;
     var shownTier = -1;
     var shownP = -1;
-    var jr = 0;
-    var active = false;
-    var update = function () {
-      jr = 0;
-      if (!active) return;
-      var r = journey.getBoundingClientRect();
-      var span = r.height - window.innerHeight;
-      var p = span > 0 ? Math.min(1, Math.max(0, -r.top / span)) : 0;
+    var show = function (p) {
       var seg = Math.min(3, Math.floor(p * 4));
       var u = p * 4 - seg;
       var day = Math.round(TH[seg] + (TH[seg + 1] - TH[seg]) * Math.min(1, u));
@@ -342,16 +337,33 @@
       }
       if (Math.abs(p - shownP) > 0.001) { shownP = p; fill.style.transform = 'scaleX(' + p.toFixed(4) + ')'; }
     };
-    // Kaydırma karesi başına tek okuma; sahne ekran dışındayken ya da kaydırma yokken iş yapılmaz.
-    var schedule = function () { if (active && !jr) jr = requestAnimationFrame(update); };
-    window.addEventListener('scroll', schedule, { passive: true });
-    window.addEventListener('resize', schedule, { passive: true });
-    if ('IntersectionObserver' in window) {
-      new IntersectionObserver(function (es) {
-        active = es[0].isIntersecting;
-        schedule();
-      }).observe(journey);
+    // GSAP ilk boyamadan sonra yüklenir (motion.js); sahne o zamana kadar sayfanın aşağısında bekler.
+    (KV.whenGsap || function (fn) { fn(); })(function () {
+    if (window.ScrollTrigger) {
+      // Yapışkan sahne CSS'te; ilerlemeyi ScrollTrigger verir (sahnenin üstü ekranın üstünde → altı ekranın altında).
+      window.ScrollTrigger.create({ trigger: journey, start: 'top top', end: 'bottom bottom', onUpdate: function (self) { show(self.progress); } });
+    } else {
+      // Yedek yol: kaydırma karesi başına tek okuma; sahne ekran dışındayken iş yapılmaz.
+      var jr = 0;
+      var active = false;
+      var update = function () {
+        jr = 0;
+        if (!active) return;
+        var r = journey.getBoundingClientRect();
+        var span = r.height - window.innerHeight;
+        show(span > 0 ? Math.min(1, Math.max(0, -r.top / span)) : 0);
+      };
+      var schedule = function () { if (active && !jr) jr = requestAnimationFrame(update); };
+      window.addEventListener('scroll', schedule, { passive: true });
+      window.addEventListener('resize', schedule, { passive: true });
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (es) {
+          active = es[0].isIntersecting;
+          schedule();
+        }).observe(journey);
+      }
     }
+    });
     raysBox.classList.add('is-alive');
     KV.watchLoop(raysBox);
   }

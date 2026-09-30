@@ -24,9 +24,11 @@
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/geologica-tr.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/inter-tr.woff2" as="font" type="font/woff2" crossorigin>
+<script>(function(d){try{if(matchMedia('(prefers-reduced-motion: reduce)').matches||localStorage.getItem('kivilcim-site-calm')==='1')return}catch(e){}d.classList.add('intro');window.__kvIntro=setTimeout(function(){d.classList.remove('intro')},2000)})(document.documentElement)</script>
 <link rel="stylesheet" href="assets/css/site.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Kıvılcım","description":"Küçük günlük görevleri büyüyen bir aleve çeviren, oyunlaştırılmış bir alışkanlık uygulaması. Hesap, sunucu, reklam ve satın alma yok.","applicationCategory":"LifestyleApplication","operatingSystem":"Windows 10, Windows 11, macOS, Linux, Android 7+","softwareVersion":"2.5.0","inLanguage":["tr","en"],"url":"https://yigit2015.github.io/kivilcim-indir/","downloadUrl":"https://github.com/yigit2015/kivilcim-indir/releases/latest","image":"https://yigit2015.github.io/kivilcim-indir/assets/img/og.jpg","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"}}</script>
 <script src="assets/js/site.js" defer></script>
+<script src="assets/js/motion.js" defer></script>
 <script src="assets/js/home.js" defer></script>
 </head>
 <body>
@@ -354,13 +356,13 @@
       <figure class="panel chart" style="margin:0">
         <h3>Bu hafta</h3>
         <div class="bars">
-          <div class="bar-col"><span class="v">4</span><span class="trk"><span class="fil" style="height:80%"></span></span><span class="d">Pzt</span></div>
-          <div class="bar-col"><span class="v">3</span><span class="trk"><span class="fil" style="height:60%"></span></span><span class="d">Sal</span></div>
-          <div class="bar-col"><span class="v">5</span><span class="trk"><span class="fil" style="height:100%"></span></span><span class="d">Çar</span></div>
-          <div class="bar-col"><span class="v">4</span><span class="trk"><span class="fil" style="height:80%"></span></span><span class="d">Per</span></div>
-          <div class="bar-col"><span class="v">2</span><span class="trk"><span class="fil" style="height:40%"></span></span><span class="d">Cum</span></div>
-          <div class="bar-col"><span class="v">3</span><span class="trk"><span class="fil" style="height:60%"></span></span><span class="d">Cmt</span></div>
-          <div class="bar-col today"><span class="v">4</span><span class="trk"><span class="fil" style="height:80%"></span></span><span class="d">Paz</span></div>
+          <div class="bar-col"><span class="v" data-countup>4</span><span class="trk"><span class="fil" style="height:80%"></span></span><span class="d">Pzt</span></div>
+          <div class="bar-col"><span class="v" data-countup>3</span><span class="trk"><span class="fil" style="height:60%"></span></span><span class="d">Sal</span></div>
+          <div class="bar-col"><span class="v" data-countup>5</span><span class="trk"><span class="fil" style="height:100%"></span></span><span class="d">Çar</span></div>
+          <div class="bar-col"><span class="v" data-countup>4</span><span class="trk"><span class="fil" style="height:80%"></span></span><span class="d">Per</span></div>
+          <div class="bar-col"><span class="v" data-countup>2</span><span class="trk"><span class="fil" style="height:40%"></span></span><span class="d">Cum</span></div>
+          <div class="bar-col"><span class="v" data-countup>3</span><span class="trk"><span class="fil" style="height:60%"></span></span><span class="d">Cmt</span></div>
+          <div class="bar-col today"><span class="v" data-countup>4</span><span class="trk"><span class="fil" style="height:80%"></span></span><span class="d">Paz</span></div>
         </div>
         <figcaption>Örnek veri: gün gün tamamlanan görev sayısı. Bugün turuncu.</figcaption>
       </figure>
@@ -384,15 +386,15 @@
         <figure class="panel chart" style="margin:0">
           <h3>9 hazır program</h3>
           <ul class="programs">
-            <li><span class="pn">10 günde su dengesi</span><span class="pb"><i style="width:15.2%"></i></span><span class="pd">10 gün</span></li>
-            <li><span class="pn">14 günde sakin zihin</span><span class="pb"><i style="width:21.2%"></i></span><span class="pd">14 gün</span></li>
-            <li><span class="pn">21 günde erken kalkma</span><span class="pb"><i style="width:31.8%"></i></span><span class="pd">21 gün</span></li>
-            <li><span class="pn">21 günde derin odak</span><span class="pb"><i style="width:31.8%"></i></span><span class="pd">21 gün</span></li>
-            <li><span class="pn">4 haftada harekete geç</span><span class="pb"><i style="width:42.4%"></i></span><span class="pd">28 gün</span></li>
-            <li><span class="pn">28 günde derin uyku</span><span class="pb"><i style="width:42.4%"></i></span><span class="pd">28 gün</span></li>
-            <li><span class="pn">30 günde okuma alışkanlığı</span><span class="pb"><i style="width:45.5%"></i></span><span class="pd">30 gün</span></li>
-            <li><span class="pn">30 günde dik duruş</span><span class="pb"><i style="width:45.5%"></i></span><span class="pd">30 gün</span></li>
-            <li><span class="pn">66 günde kalıcı alışkanlık</span><span class="pb"><i style="width:100%"></i></span><span class="pd">66 gün</span></li>
+            <li><span class="pn">10 günde su dengesi</span><span class="pb"><i style="width:15.2%"></i></span><span class="pd"><span data-countup>10</span> gün</span></li>
+            <li><span class="pn">14 günde sakin zihin</span><span class="pb"><i style="width:21.2%"></i></span><span class="pd"><span data-countup>14</span> gün</span></li>
+            <li><span class="pn">21 günde erken kalkma</span><span class="pb"><i style="width:31.8%"></i></span><span class="pd"><span data-countup>21</span> gün</span></li>
+            <li><span class="pn">21 günde derin odak</span><span class="pb"><i style="width:31.8%"></i></span><span class="pd"><span data-countup>21</span> gün</span></li>
+            <li><span class="pn">4 haftada harekete geç</span><span class="pb"><i style="width:42.4%"></i></span><span class="pd"><span data-countup>28</span> gün</span></li>
+            <li><span class="pn">28 günde derin uyku</span><span class="pb"><i style="width:42.4%"></i></span><span class="pd"><span data-countup>28</span> gün</span></li>
+            <li><span class="pn">30 günde okuma alışkanlığı</span><span class="pb"><i style="width:45.5%"></i></span><span class="pd"><span data-countup>30</span> gün</span></li>
+            <li><span class="pn">30 günde dik duruş</span><span class="pb"><i style="width:45.5%"></i></span><span class="pd"><span data-countup>30</span> gün</span></li>
+            <li><span class="pn">66 günde kalıcı alışkanlık</span><span class="pb"><i style="width:100%"></i></span><span class="pd"><span data-countup>66</span> gün</span></li>
           </ul>
           <figcaption>Çubuk, programın gün sayısını gösterir.</figcaption>
         </figure>
@@ -414,7 +416,7 @@
     <div class="room-head">
       <h2 id="nazik-baslik">Utandırmayan bir koç</h2>
     </div>
-    <p class="statement">Seri kırılınca suçlama yok. Kıvılcım ne kadar tutarlı olduğunu gösterir: <span class="num">son 30 günde 27 gün, %90.</span></p>
+    <p class="statement">Seri kırılınca suçlama yok. Kıvılcım ne kadar tutarlı olduğunu gösterir: <span class="num">son 30 günde <span data-countup>27</span> gün, %<span data-countup>90</span>.</span></p>
     <p class="dim" style="margin-top:24px">Kötü bir günde liste sadeleşir. Bildirimler istersen nazik gelir ya da günde tek özete iner. Koç tonunu da sen seçersin:</p>
     <ul class="tones">
       <li><b>Nazik arkadaş</b><q>Zor bir gün olabilir. Küçük bir adım da sayılır.</q></li>
@@ -435,7 +437,7 @@
       </div>
       <figure class="share-card a5" style="margin:0" aria-label="Örnek seri kartı">
         <svg viewBox="0 0 100 110" aria-hidden="true" style="--ko:#2F6BFF;--km:#2FD2FF;--kc:#CFFAFF;--ke:#9FF4FF"><use href="#kivi"/></svg>
-        <div><div class="big">39</div><div>günlük seri, Mavi Plazma</div><div class="small">Örnek kart, örnek veri</div></div>
+        <div><div class="big" data-countup>39</div><div>günlük seri, Mavi Plazma</div><div class="small">Örnek kart, örnek veri</div></div>
       </figure>
     </div>
   </section>
@@ -460,7 +462,7 @@
           <div class="screen">
             <div class="t2">Pazartesi</div>
             <div class="t1">Bugün</div>
-            <div class="pills"><span>39 gün</span><span>640 kıvılcım</span></div>
+            <div class="pills"><span><b data-countup>39</b> gün</span><span><b data-countup>640</b> kıvılcım</span></div>
             <div class="card">
               <svg viewBox="0 0 100 110"><use href="#kivi"/></svg>
               <div class="mini-sticks"><i class="on"></i><i class="on"></i><i></i><i></i></div>
@@ -636,7 +638,7 @@
       <li><a href="https://github.com/yigit2015/kivilcim-indir"><svg class="ico" aria-hidden="true"><use href="assets/img/ikonlar.svg#i-github-logo"/></svg>GitHub</a></li>
     </ul>
     <button class="btn btn-ghost btn-sm calm-toggle" type="button" aria-pressed="false">Sade hareket<span class="faint" aria-hidden="true" data-calm-hint>Kapalı</span></button>
-    <small>Kıvılcım ücretsiz bir alışkanlık uygulaması. Bu site çerez, analiz ya da dış istek kullanmaz. Simgeler: Phosphor (MIT). Yazılar: Geologica ve Inter (SIL Open Font License).</small>
+    <small>Kıvılcım ücretsiz bir alışkanlık uygulaması. Bu site çerez, analiz ya da dış istek kullanmaz. Simgeler: Phosphor (MIT). Yazılar: Geologica ve Inter (SIL Open Font License). Hareket: GSAP (GreenSock standart ücretsiz lisansı).</small>
   </div>
 </footer>
 </body>
