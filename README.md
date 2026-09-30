@@ -1,6 +1,8 @@
 # Kıvılcım · İndir
 
-Kıvılcım alışkanlık uygulamasının kurulum dosyaları. Bu depoda kod yok; yalnız indirmeler burada.
+**Site:** https://yigit2015.github.io/kivilcim-indir/ (özellikler, sürüm notları, [gizlilik](https://yigit2015.github.io/kivilcim-indir/gizlilik/), [destek](https://yigit2015.github.io/kivilcim-indir/destek/))
+
+Kıvılcım alışkanlık uygulamasının kurulum dosyaları ve tanıtım sitesi. Bu depoda uygulamanın kodu yok; yalnız indirmeler ve site dosyaları burada.
 
 **En son sürüm:** [Releases](https://github.com/yigit2015/kivilcim-indir/releases/latest)
 
