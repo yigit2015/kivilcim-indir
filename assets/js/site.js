@@ -132,7 +132,9 @@
 
   // ── İşletim sistemi ───────────────────────────────────────────────────────
   var BASE = 'https://github.com/yigit2015/kivilcim-indir/releases/latest/download/';
-  var WEB = 'https://claude.ai/artifact/Xjzge8CMprANM8s2r9yocx';
+  // Web sürümü sitenin kendi klasöründe: adres bu betiğin yerinden bulunur (alt sayfalarda da, başka alan adında da doğru).
+  var here = document.currentScript && document.currentScript.src;
+  var WEB = here ? here.replace(/assets\/js\/site\.js.*$/, 'uygulama/') : 'uygulama/';
   function detectOS() {
     var ua = navigator.userAgent || '';
     var p = ((navigator.userAgentData && navigator.userAgentData.platform) || '').toLowerCase();

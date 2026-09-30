@@ -1,0 +1,25 @@
+{
+  "name": "Kıvılcım",
+  "short_name": "Kıvılcım",
+  "description": "Serini koru, kıvılcımı büyüt: oyunlaştırılmış alışkanlık takibi.",
+  "lang": "tr",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#141416",
+  "theme_color": "#141416",
+  "categories": ["lifestyle", "productivity", "health"],
+  "shortcuts": [
+    { "name": "Görev ekle", "short_name": "Görev ekle", "url": "./?eylem=add", "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Pomodoro", "short_name": "Pomodoro", "url": "./?eylem=pomodoro", "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Nefes al", "short_name": "Nefes al", "url": "./?eylem=breath", "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Serim", "short_name": "Serim", "url": "./?eylem=stats", "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192" }] }
+  ],
+  "icons": [
+    { "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "./icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "./icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

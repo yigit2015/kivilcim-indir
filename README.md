@@ -8,7 +8,7 @@
 <br>
 
 <a href="https://yigit2015.github.io/kivilcim-indir/#indir"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/readme/btn-indir-dark.png"><img src=".github/readme/btn-indir-light.png" height="44" alt="Kıvılcım'ı indir"></picture></a>&nbsp;
-<a href="https://claude.ai/artifact/Xjzge8CMprANM8s2r9yocx"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/readme/btn-web-dark.png"><img src=".github/readme/btn-web-light.png" height="44" alt="Tarayıcıda dene"></picture></a>
+<a href="https://yigit2015.github.io/kivilcim-indir/uygulama/"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/readme/btn-web-dark.png"><img src=".github/readme/btn-web-light.png" height="44" alt="Tarayıcıda dene"></picture></a>
 
 <a href="https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-windows-kurulum.exe"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/readme/btn-windows-dark.png"><img src=".github/readme/btn-windows-light.png" height="44" alt="Windows için indir (.exe)"></picture></a>&nbsp;
 <a href="https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-mac.dmg"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/readme/btn-mac-dark.png"><img src=".github/readme/btn-mac-light.png" height="44" alt="Mac için indir (.dmg)"></picture></a>&nbsp;
@@ -103,7 +103,7 @@ Bağlantılar hep son sürümü indirir. Güncelleme verini silmez.
 | Mac | [Kivilcim-mac.dmg](https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-mac.dmg) | Apple Silicon ve Intel |
 | Linux | [AppImage](https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-linux.AppImage) · [.deb](https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-linux.deb) | |
 | Android | [Kivilcim-android.apk](https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-android.apk) | Android 7 ve üstü |
-| iPhone | Yakında | O zamana kadar [web sürümü](https://claude.ai/artifact/Xjzge8CMprANM8s2r9yocx) Safari'de çalışır |
+| iPhone | Yakında | O zamana kadar [web sürümü](https://yigit2015.github.io/kivilcim-indir/uygulama/) Safari'de çalışır |
 
 <details>
 <summary><b>Kurulum notları</b></summary>
