@@ -485,6 +485,52 @@ html { scrollbar-color: var(--line) var(--bg); }
 }
 :root[data-theme="light"] .theme-btn .i-sun { opacity: 0; transform: rotate(90deg) scale(0.6); }
 :root[data-theme="light"] .theme-btn .i-moon { opacity: 1; transform: none; }
+/* Dil düğmesi: öbür dildeki aynı sayfaya gider. Geniş ekranda dünya simgesi ve dilin adı, dar ekranda kısaltma. */
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex: none;
+  min-width: 44px;
+  height: 44px;
+  padding: 0 var(--s3);
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+  color: var(--text);
+  font: 600 var(--fs-15) / 1 var(--font-body);
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.lang-btn:hover { border-color: var(--orange-a45); }
+.lang-btn .ico { width: 18px; height: 18px; color: var(--orange); }
+.lang-btn .lang-short { display: none; }
+/* Menüdeki tema satırı: yalnız tema düğmesi başlıktan menüye geçtiğinde (dar ekran) görünür. */
+.nav-theme { display: none; }
+.nav-theme button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  min-height: 44px;
+  padding: 0 var(--s2);
+  border: 0;
+  border-radius: var(--r-md);
+  background: transparent;
+  color: var(--text-dim);
+  font: 500 var(--fs-17) / 1 var(--font-body);
+  text-align: left;
+  cursor: pointer;
+}
+.nav-theme button:hover { color: var(--text); }
+.nav-theme .ico { width: 20px; height: 20px; }
+.nav-theme .i-moon { display: none; }
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) .nav-theme .i-sun { display: none; }
+  :root:not([data-theme="dark"]) .nav-theme .i-moon { display: block; }
+}
+:root[data-theme="light"] .nav-theme .i-sun { display: none; }
+:root[data-theme="light"] .nav-theme .i-moon { display: block; }
 @media (max-width: 899px) {
   .menu-btn { display: inline-flex; }
   .nav {
@@ -502,18 +548,36 @@ html { scrollbar-color: var(--line) var(--bg); }
   .nav ul { flex-direction: column; align-items: stretch; }
   .nav a { font-size: var(--fs-17); padding: 0 var(--s2); }
   .bar .btn-sm { padding: 0 var(--s4); }
+  .lang-btn .lang-long { display: none; }
+  .lang-btn .lang-short { display: inline; }
+}
+/* Menü satır hâline geçtiği hemen sonraki aralıkta yer dar: dil düğmesi kısaltmaya iner. */
+@media (min-width: 900px) and (max-width: 979px) {
+  .lang-btn { width: 44px; padding: 0; }
+  .lang-btn .ico,
+  .lang-btn .lang-long { display: none; }
+  .lang-btn .lang-short { display: inline; }
 }
 /* Dar başlık: logo hiç daralmaz; menü yazısı gizlenir ama ekran okuyucuda düğmenin adı olarak kalır. */
-@media (max-width: 439px) {
+@media (max-width: 599px) {
   .bar-in { gap: var(--s2); }
-  .bar .btn-sm { padding: 0 var(--s3); }
   .menu-btn span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+}
+/* Telefonda başlıkta dil düğmesi kalır (yeni gelen için daha önemli), tema düğmesi menüye geçer. */
+@media (max-width: 479px) {
+  .bar-in > .theme-btn { display: none; }
+  .nav-theme { display: block; }
+  .lang-btn { width: 44px; padding: 0; }
+  .lang-btn .ico { display: none; }
+}
+@media (max-width: 439px) {
+  .bar .btn-sm { padding: 0 var(--s3); }
 }
 @media (max-width: 374px) {
   .brand span { font-size: var(--fs-17); }
 }
 /* İngilizcede "Download" uzun: en dar ekranda logo yalnız alev olarak kalır (ad ekran okuyucuda durur). */
-@media (max-width: 349px) {
+@media (max-width: 359px) {
   html[lang="en"] .brand span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 }
 

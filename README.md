@@ -1,3 +1,8 @@
+<p align="right">
+<picture><source media="(prefers-color-scheme: dark)" srcset=".github/readme/btn-lang-tr-on-dark.png"><img src=".github/readme/btn-lang-tr-on-light.png" height="36" alt="Türkçe (bu sayfa)"></picture>
+<a href="README.en.md"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/readme/btn-lang-en-off-dark.png"><img src=".github/readme/btn-lang-en-off-light.png" height="36" alt="English"></picture></a>
+</p>
+
 <div align="center">
 
 <picture>

@@ -54,7 +54,13 @@
     for (var i = 0; i < metas.length; i++) metas[i].setAttribute('content', chosen ? (chosen === 'dark' ? '#141416' : '#F2F2F7') : metaOrig[i]);
     var label = effectiveTheme() === 'dark' ? (EN ? 'Switch to light theme' : 'Açık temaya geç') : EN ? 'Switch to dark theme' : 'Koyu temaya geç';
     var btns = document.querySelectorAll('[data-theme-toggle]');
-    for (var j = 0; j < btns.length; j++) { btns[j].setAttribute('aria-label', label); btns[j].title = label; }
+    for (var j = 0; j < btns.length; j++) {
+      btns[j].setAttribute('aria-label', label);
+      btns[j].title = label;
+      // Menüdeki tema satırı (dar ekran): görünen yazı da etiketle aynı.
+      var text = btns[j].querySelector('[data-theme-label]');
+      if (text) text.textContent = label;
+    }
   };
   var setTheme = function (next) {
     try { window.localStorage.setItem(THEME_KEY, next); } catch (e) { /* depolama kapalı: yalnız bu sayfada */ }
