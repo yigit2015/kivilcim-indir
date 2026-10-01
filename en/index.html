@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kıvılcım: a free, gamified habit app</title>
+<meta name="description" content="Check off your task, earn sparks, grow your streak. A free habit app with no account and no ads: Windows, Mac, Linux and Android. iPhone version coming soon.">
+<link rel="canonical" href="https://yigit2015.github.io/kivilcim-indir/en/">
+<link rel="alternate" hreflang="tr" href="https://yigit2015.github.io/kivilcim-indir/">
+<link rel="alternate" hreflang="en" href="https://yigit2015.github.io/kivilcim-indir/en/">
+<link rel="alternate" hreflang="x-default" href="https://yigit2015.github.io/kivilcim-indir/">
+<meta name="theme-color" content="#141416" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F2F2F7" media="(prefers-color-scheme: light)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kıvılcım">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Kıvılcım: a gamified habit app">
+<meta property="og:description" content="Check off your task, earn sparks, grow your streak. No account, no ads, everything free.">
+<meta property="og:url" content="https://yigit2015.github.io/kivilcim-indir/">
+<meta property="og:image" content="https://yigit2015.github.io/kivilcim-indir/assets/img/og.jpg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="Kıvılcım's home screen and achievements screen">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/img/kivi.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+<link rel="preload" href="../assets/fonts/geologica-tr.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/inter-tr.woff2" as="font" type="font/woff2" crossorigin>
+<script>(function(d){try{var t=localStorage.getItem('kivilcim-site-theme');if(t==='dark'||t==='light')d.setAttribute('data-theme',t)}catch(e){}try{if(matchMedia('(prefers-reduced-motion: reduce)').matches||localStorage.getItem('kivilcim-site-calm')==='1')return}catch(e){}d.classList.add('intro');window.__kvIntro=setTimeout(function(){d.classList.remove('intro')},2000)})(document.documentElement)</script>
+<link rel="stylesheet" href="../assets/css/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Kıvılcım","description":"A gamified habit app that turns small daily tasks into a growing flame. No account, no server, no ads, no purchases.","applicationCategory":"LifestyleApplication","operatingSystem":"Windows 10, Windows 11, macOS, Linux, Android 7+","softwareVersion":"2.5.0","inLanguage":"en","url":"https://yigit2015.github.io/kivilcim-indir/en/","downloadUrl":"https://github.com/yigit2015/kivilcim-indir/releases/latest","image":"https://yigit2015.github.io/kivilcim-indir/assets/img/og.jpg","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script src="../assets/js/site.js" defer></script>
+<script src="../assets/js/motion.js" defer></script>
+<script src="../assets/js/home.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#icerik">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="spark-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFF3B0"/><stop offset="0.5" stop-color="#FFC94D"/><stop offset="1" stop-color="#FF7A1A"/></linearGradient>
+    <symbol id="kivi" viewBox="0 0 100 110"><path d="M50 2 C55 12 63 17 67 25 C71 22 73 17 73 12 C83 22 91 37 90 55 C94 58 96 64 94 71 C92 93 74 107 50 107 C26 107 8 93 6 71 C4 64 6 58 10 55 C9 39 18 28 29 20 C31 26 35 29 40 27 C40 17 44 9 50 2 Z" style="fill:var(--ko,#E8442E)"/><path d="M50 20 C54 28 61 32 64 39 C67 37 69 34 69 31 C77 40 82 51 81 64 C84 67 84 72 83 76 C82 93 68 102 50 102 C32 102 18 93 17 76 C16 72 16 67 19 64 C18 52 24 43 32 37 C34 41 37 43 41 42 C41 33 45 26 50 20 Z" style="fill:var(--km,#FF8A2B)"/><path d="M80 29 C81.9 32.8 83.8 35.2 83.8 38 C83.8 40.4 82.1 42 80 42 C77.9 42 76.2 40.4 76.2 38 C76.2 35.2 78.1 32.8 80 29 Z" style="fill:var(--ke,#FFB347)"/><path d="M50 42 C57 52 71 57 72 74 C73 90 63 99 50 99 C37 99 27 90 28 74 C29 57 43 52 50 42 Z" style="fill:var(--kc,#FFD15C)"/><ellipse cx="41" cy="76" rx="4.2" ry="5.2" fill="#3A140A"/><ellipse cx="59" cy="76" rx="4.2" ry="5.2" fill="#3A140A"/><circle cx="42.4" cy="74.2" r="1.5" fill="#fff"/><circle cx="60.4" cy="74.2" r="1.5" fill="#fff"/></symbol>
+  </defs>
+</svg>
+<header class="bar">
+  <div class="wrap bar-in">
+    <a class="brand" translate="no" href="./"><svg viewBox="0 0 100 110" aria-hidden="true"><use href="#kivi"/></svg><span>Kıvılcım</span></a>
+    <nav class="nav" id="menu" aria-label="Main menu">
+      <ul>
+        <li><a href="features/">Features</a></li>
+        <li><a href="releases/">Releases</a></li>
+        <li><a href="../gizlilik/#english">Privacy</a></li>
+        <li><a href="support/">Support</a></li>
+        <li><a class="lang-link" href="../" hreflang="tr" lang="tr">Türkçe</a></li>
+        <li><a href="https://github.com/yigit2015/kivilcim-indir"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-github-logo"/></svg>GitHub</a></li>
+      </ul>
+    </nav>
+    <button class="theme-btn" type="button" data-theme-toggle aria-label="Switch to light theme"><svg class="ico i-sun" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-sun"/></svg><svg class="ico i-moon" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-moon-stars"/></svg></button>
+    <a class="btn btn-primary btn-sm" href="#indir">Download</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-list"/></svg><span>Menu</span></button>
+  </div>
+</header>
+
+<main id="icerik">
+  <section class="hero" aria-labelledby="baslik">
+    <div class="wrap hero-in">
+      <div>
+        <h1 id="baslik">Small tasks, a growing flame.</h1>
+        <p class="lead">Kıvılcım is a gamified habit app: check off your task, earn sparks, grow your streak. No account, no ads, everything free.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#indir" data-os-cta data-status="hero-status"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-download-simple"/></svg><span data-os-label>Download</span></a>
+          <a class="link-quiet" data-os-alt href="../uygulama/">Try it in your browser</a>
+        </div>
+        <p class="platforms-line" data-os-line data-ios="iPhone version coming soon. For now you can use the web version in your browser.">For Windows, Mac, Linux and Android. iPhone version coming soon.</p>
+        <p class="dl-status" id="hero-status" role="status"></p>
+      </div>
+
+      <div class="hearth" role="group" aria-labelledby="ocak-adi">
+        <div class="hearth-top">
+          <p class="faint" id="ocak-adi">The Hearth: a sample day</p>
+          <span class="pill counter"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0.5C12.9 7.2 16.8 11.1 23.5 12C16.8 12.9 12.9 16.8 12 23.5C11.1 16.8 7.2 12.9 0.5 12C7.2 11.1 11.1 7.2 12 0.5Z" fill="url(#spark-g)"/></svg><span class="num" data-count>0</span><span class="sr-only"> sparks</span></span>
+        </div>
+        <div class="hearth-stage">
+          <div class="orb" aria-hidden="true"></div>
+          <div class="hearth-glow" aria-hidden="true"></div>
+          <svg class="kivi kivi-hero" viewBox="0 0 100 110" aria-hidden="true" focusable="false">
+            <g class="hop"><g class="body">
+              <path d="M50 2 C55 12 63 17 67 25 C71 22 73 17 73 12 C83 22 91 37 90 55 C94 58 96 64 94 71 C92 93 74 107 50 107 C26 107 8 93 6 71 C4 64 6 58 10 55 C9 39 18 28 29 20 C31 26 35 29 40 27 C40 17 44 9 50 2 Z" fill="#E8442E"/>
+              <path d="M50 20 C54 28 61 32 64 39 C67 37 69 34 69 31 C77 40 82 51 81 64 C84 67 84 72 83 76 C82 93 68 102 50 102 C32 102 18 93 17 76 C16 72 16 67 19 64 C18 52 24 43 32 37 C34 41 37 43 41 42 C41 33 45 26 50 20 Z" fill="#FF8A2B"/>
+              <path d="M80 29 C81.9 32.8 83.8 35.2 83.8 38 C83.8 40.4 82.1 42 80 42 C77.9 42 76.2 40.4 76.2 38 C76.2 35.2 78.1 32.8 80 29 Z" fill="#FFB347"/>
+              <path d="M50 42 C57 52 71 57 72 74 C73 90 63 99 50 99 C37 99 27 90 28 74 C29 57 43 52 50 42 Z" fill="#FFD15C"/>
+              <g class="eyes">
+                <g class="eye"><ellipse cx="41" cy="76" rx="4.2" ry="5.2" fill="#3A140A"/><circle cx="42.4" cy="74.2" r="1.5" fill="#fff"/></g>
+                <g class="eye"><ellipse cx="59" cy="76" rx="4.2" ry="5.2" fill="#3A140A"/><circle cx="60.4" cy="74.2" r="1.5" fill="#fff"/></g>
+              </g>
+            </g></g>
+          </svg>
+          <div class="sticks" aria-hidden="true">
+            <span class="stick"><span class="fire"></span></span>
+            <span class="stick"><span class="fire"></span></span>
+            <span class="stick"><span class="fire"></span></span>
+            <span class="stick"><span class="fire"></span></span>
+            <span class="stick"><span class="fire"></span></span>
+            <span class="stick"><span class="fire"></span></span>
+          </div>
+        </div>
+        <div class="next-row">
+          <p data-next aria-live="polite">Next: Drink water</p>
+          <button class="check-btn" type="button" aria-label="Complete the next task: Drink water"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-check"/></svg></button>
+        </div>
+        <div class="next-row done-row" hidden>
+          <p class="done-title" role="status">Today's fire is lit</p>
+          <button class="btn btn-ghost btn-sm" type="button" data-again><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-arrow-counter-clockwise"/></svg>Light it again</button>
+        </div>
+        <p class="note">A demo with sample tasks. In the app every task is a log; check them off and the logs catch fire.</p>
+        <div class="spark-layer" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap room" id="nasil" aria-labelledby="nasil-baslik">
+    <div class="room-head">
+      <h2 id="nasil-baslik">How it works</h2>
+    </div>
+    <ol class="fuse">
+      <li><h3>Add a task</h3><p>Write a task that repeats every day, a few times a week or on set days.</p></li>
+      <li><h3>Check it off</h3><p>Complete it with one tap, or swipe the task to the right.</p></li>
+      <li><h3>Earn sparks</h3><p>Every task brings 10 sparks. You spend sparks in the shop.</p></li>
+      <li><h3>Your streak grows</h3><p>Your flame grows a little every day. It changes color on days 7, 30, 100 and 365.</p></li>
+    </ol>
+  </section>
+
+  <section class="wrap room" id="bir-gun" aria-labelledby="gun-baslik">
+    <div class="room-head">
+      <h2 id="gun-baslik">A day with Kıvılcım</h2>
+    </div>
+    <ol class="day">
+      <li>
+        <h3>Morning</h3>
+        <p>Reminders arrive on time: a heads-up 15 minutes before the task, and “did you do it?” 60 minutes after.</p>
+        <p>An if–then trigger ties a new habit to an old one: “After my coffee, read 10 pages.”</p>
+        <div class="chips"><span class="chip"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-device-mobile"/></svg>Reminders on phone</span></div>
+      </li>
+      <li>
+        <h3>During the day</h3>
+        <p>Scan the QR tag on your fridge and the task is checked off.</p>
+        <p>When you need to focus, Pomodoro or the task's timer keeps time.</p>
+        <div class="chips"><span class="chip"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-globe"/></svg>QR tag with the web version</span></div>
+      </li>
+      <li>
+        <h3>Evening</h3>
+        <p>Write your mood, intention and gratitude in the journal. The day close summary wraps up today.</p>
+        <p>Open your chest and catch the multiplier: the sparks inside multiply.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="wrap room" id="ocak" aria-labelledby="ocak-baslik">
+    <div class="room-head">
+      <h2 id="ocak-baslik">The Hearth and today</h2>
+      <p>In the Hearth on the home screen, every task is a log. You finish tasks with one tap or a swipe; the next task is always within reach.</p>
+    </div>
+    <div class="split">
+      <div class="a5">
+        <div class="panel swipe-wrap" role="group" aria-labelledby="kaydir-baslik">
+          <h3 id="kaydir-baslik">Try swiping</h3>
+          <p class="faint">Swipe right: complete. Swipe left: skip with a joker.</p>
+          <div class="swipe">
+            <div class="swipe-under" aria-hidden="true">
+              <span class="ok"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-check"/></svg>Complete</span>
+              <span class="joker">Joker<svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-dice-five"/></svg></span>
+            </div>
+            <div class="swipe-row" aria-hidden="true"><span class="ring"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-check"/></svg></span><span class="t">Read a book<span class="m">5 pages, sample task</span></span></div>
+          </div>
+          <div class="swipe-actions">
+            <button class="btn btn-ghost btn-sm" type="button" data-swipe="done">Complete</button>
+            <button class="btn btn-ghost btn-sm" type="button" data-swipe="joker">Skip with joker</button>
+            <button class="btn btn-ghost btn-sm" type="button" data-swipe="reset">Undo</button>
+          </div>
+          <p class="swipe-status" role="status"></p>
+        </div>
+        <figure class="shot" style="margin-top:32px">
+          <div class="frame">
+            <video class="loop-video" muted loop playsinline preload="none" width="600" height="1298" poster="../assets/img/shots/en/dongu-ilk.webp" aria-label="Recorded in the app: on the Today screen, checking off the next task sets a log in the Hearth alight and the streak goes from 38 to 39 days; two more check-ins and three logs are burning.">
+              <source src="../assets/video/dongu-en.mp4" type="video/mp4">
+              <source src="../assets/video/dongu-en.webm" type="video/webm">
+            </video>
+            <button class="loop-toggle" type="button" hidden aria-label="Play recording"><svg class="ico i-play" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-play"/></svg><svg class="ico i-pause" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-pause"/></svg></button>
+          </div>
+          <figcaption>Recorded in the app, sample data.</figcaption>
+        </figure>
+      </div>
+      <ul class="feat a7">
+        <li><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-check-circle"/></svg><div><h3>A repeat that fits you</h3><p>Every day, a few times a week or on set days. Pick a habit to build or a habit to quit; for quitting, clean days are counted.</p></div></li>
+        <li><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-timer"/></svg><div><h3>Start small, grow it</h3><p>Counters, timers, sub-steps and a mini version. The goal can rise by itself week by week.</p></div></li>
+        <li><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-bell"/></svg><div><h3>Reminders on time</h3><p>Per task, a heads-up 15 minutes before and “did you do it?” 60 minutes after. Notifications can be normal, gentle or one daily summary.</p><div class="chips"><span class="chip"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-device-mobile"/></svg>On phone</span></div></div></li>
+        <li><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-map-pin"/></svg><div><h3>Tie it to places and your calendar</h3><p>A location reminder lets you know when you arrive at a place you chose. You can also export your tasks to your calendar.</p><div class="chips"><span class="chip"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-device-mobile"/></svg>Location: on phone</span><span class="chip"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-globe"/></svg>On web while the app is open</span><span class="chip"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-calendar-plus"/></svg>Calendar: everywhere</span></div></div></li>
+        <li><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-qr-code"/></svg><div><h3>Check off with a tag</h3><p>Print a QR tag; scan it and the task is checked off. The same link can be written to an NFC tag too.</p><div class="chips"><span class="chip"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-globe"/></svg>With the web version</span><span class="chip"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-android-logo"/></svg>NFC: Android Chrome, beta</span></div></div></li>
+        <li><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-coffee"/></svg><div><h3>If–then</h3><p>A trigger like “after my coffee” ties a new habit to something you already do.</p></div></li>
+        <li><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-hand-heart"/></svg><div><h3>A simpler list on bad days</h3><p>On a hard day the screen gets simpler. For newcomers, sections unlock day by day.</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="wrap room" id="seri" aria-labelledby="seri-baslik">
+    <div class="room-head">
+      <h2 id="seri-baslik">Your streak, a journey in five colors</h2>
+      <p>As your streak grows, your flame changes color: a new tier on days 7, 30, 100 and 365. Scroll down and pass a year in a few seconds.</p>
+    </div>
+    <div class="journey-mode">
+      <div class="journey" aria-hidden="true">
+        <div class="journey-stage">
+          <div>
+            <p class="journey-count"><span data-day>0</span><small>days</small></p>
+            <p class="journey-tier" data-tier>Orange Flame</p>
+            <p class="journey-next" data-next-tier>Gold Flame on day 7</p>
+            <div class="track"><div class="track-fill"></div></div>
+            <div class="track-marks"><span>0</span><span>7</span><span>30</span><span>100</span><span>365</span></div>
+          </div>
+          <div class="journey-art">
+            <div class="rays">
+              <span class="ray is-on" style="--ray:rgba(255,122,26,0.22)"></span>
+              <span class="ray" style="--ray:rgba(255,201,77,0.22)"></span>
+              <span class="ray" style="--ray:rgba(47,210,255,0.22)"></span>
+              <span class="ray" style="--ray:rgba(164,92,255,0.24)"></span>
+              <span class="ray" style="--ray:rgba(255,232,255,0.24)"></span>
+            </div>
+            <div class="tier-stack">
+              <svg class="is-on" viewBox="0 0 100 110" style="--ko:#FF4A2B;--km:#FF7A1A;--kc:#FFD166;--ke:#FFB23F"><use href="#kivi"/></svg>
+              <svg viewBox="0 0 100 110" style="--ko:#FF9F1C;--km:#FFC94D;--kc:#FFF3B0;--ke:#FFE8A3"><use href="#kivi"/></svg>
+              <svg viewBox="0 0 100 110" style="--ko:#2F6BFF;--km:#2FD2FF;--kc:#CFFAFF;--ke:#9FF4FF"><use href="#kivi"/></svg>
+              <svg viewBox="0 0 100 110" style="--ko:#7A2BFF;--km:#A45CFF;--kc:#F1DEFF;--ke:#E0B8FF"><use href="#kivi"/></svg>
+              <svg viewBox="0 0 100 110" style="--ko:#FF5FA2;--km:#FFE8FF;--kc:#FFFFFF;--ke:#9FF4FF"><use href="#kivi"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ol class="ladder">
+        <li><svg viewBox="0 0 100 110" aria-hidden="true" style="--ko:#FF4A2B;--km:#FF7A1A;--kc:#FFD166;--ke:#FFB23F"><use href="#kivi"/></svg><div><b>Orange Flame</b><span>Starts on day one.</span></div></li>
+        <li><svg viewBox="0 0 100 110" aria-hidden="true" style="--ko:#FF9F1C;--km:#FFC94D;--kc:#FFF3B0;--ke:#FFE8A3"><use href="#kivi"/></svg><div><b>Gold Flame</b><span>On day 7.</span></div></li>
+        <li><svg viewBox="0 0 100 110" aria-hidden="true" style="--ko:#2F6BFF;--km:#2FD2FF;--kc:#CFFAFF;--ke:#9FF4FF"><use href="#kivi"/></svg><div><b>Blue Plasma</b><span>On day 30.</span></div></li>
+        <li><svg viewBox="0 0 100 110" aria-hidden="true" style="--ko:#7A2BFF;--km:#A45CFF;--kc:#F1DEFF;--ke:#E0B8FF"><use href="#kivi"/></svg><div><b>Purple Nova</b><span>On day 100.</span></div></li>
+        <li><svg viewBox="0 0 100 110" aria-hidden="true" style="--ko:#FF5FA2;--km:#FFE8FF;--kc:#FFFFFF;--ke:#9FF4FF"><use href="#kivi"/></svg><div><b>White Star</b><span>On day 365.</span></div></li>
+      </ol>
+    </div>
+    <div class="protect">
+      <h3>Protect your streak</h3>
+      <ul class="feat" style="margin-top:24px">
+        <li><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-snowflake"/></svg><div><h3>Streak freeze</h3><p>Protects a day you miss. You can keep up to 3.</p></div></li>
+        <li><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-shield"/></svg><div><h3>Streak shield</h3><p>Protects your streak for up to 3 missed days; bought with sparks in the shop.</p></div></li>
+        <li><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-island"/></svg><div><h3>Vacation mode</h3><p>Your streak waits while you're away; when you're back you pick up where you left off.</p></div></li>
+        <li><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-bandaids"/></svg><div><h3>Streak recovery</h3><p>If your streak goes out, a recovery card appears on the home screen: complete the missing day and get your streak back.</p></div></li>
+        <li><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-graduation-cap"/></svg><div><h3>Graduate a habit or start a new season</h3><p>Graduate a habit that has stuck. In a new season the counters reset; your history stays.</p></div></li>
+        <li><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-sparkle"/></svg><div><h3>Small celebrations</h3><p>A celebration when you reach a new tier and on every new streak day; in the evening, a day close summary.</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="wrap room" id="oyun" aria-labelledby="oyun-baslik">
+    <div class="room-head">
+      <h2 id="oyun-baslik">Earn sparks, spend them</h2>
+      <p>Every task brings 10 sparks. Sparks can't be bought with money; you earn them only by doing tasks.</p>
+    </div>
+    <div class="split">
+      <div class="panel panel-glow chest a7" role="group" aria-labelledby="sandik-baslik">
+        <h3 id="sandik-baslik">Chest multiplier</h3>
+        <p class="dim" style="margin-top:8px">On the 7-day chest strip, one chest opens each day. Stop the marker as it swings: the sparks inside are multiplied by x1, x2, x4 or x10.</p>
+        <p class="faint">Sample chest: 10 sparks</p>
+        <div class="x10" aria-hidden="true">x10</div>
+        <div class="chest-bar" aria-hidden="true">
+          <span class="seg seg-1" style="flex:0.25">x1</span><span class="seg seg-2" style="flex:0.15">x2</span><span class="seg seg-4" style="flex:0.075">x4</span><span class="seg seg-10" style="flex:0.05"></span><span class="seg seg-4" style="flex:0.075">x4</span><span class="seg seg-2" style="flex:0.15">x2</span><span class="seg seg-1" style="flex:0.25">x1</span>
+          <span class="needle"></span><span class="chest-flash"></span>
+        </div>
+        <div class="chest-row">
+          <button class="btn btn-primary" type="button" data-chest>Open</button>
+          <p class="faint" data-slow hidden style="margin:0">Marker is slow: calm motion is on.</p>
+        </div>
+        <div class="chest-result" role="status"></div>
+      </div>
+      <figure class="shot a5">
+        <div class="frame"><img src="../assets/img/shots/en/sandik.webp" width="600" height="1298" loading="lazy" decoding="async" alt="Opening a chest in the app: the chest next to Kıvı, a multiplier bar from x1 to x10 and a Stop button."></div>
+        <figcaption>Screenshot from the app, sample data.</figcaption>
+      </figure>
+    </div>
+    <dl class="econ" style="margin-top:48px">
+      <div><dt>Sparks and bonuses</dt><dd>10 sparks per task, 5 for the mini version. Bonuses: perfect day, early bird (05:00–09:00), star of the day (×3) and hard task.</dd></div>
+      <div><dt>Shop</dt><dd>Task joker, power potion (double sparks for 24 hours) and streak shield.</dd></div>
+      <div><dt>Cosmetics</dt><dd>4 cosmetic themes (Synthwave, Glacier, Forest, Lava); confetti, flames and backgrounds; row, button and quote skins; avatars and costumes, name effects, frames and check-in sounds (web and desktop). A deal of the day and item merging.</dd></div>
+      <div><dt>Luck and surprises</dt><dd>A lucky wheel, a mystery box and a spark piggy bank that pays interest. Golden check-ins, spark showers and happy hour.</dd></div>
+      <div><dt>Chest strip</dt><dd>The 7-day chest strip: day 7's big chest holds 15 sparks and a streak freeze; if your freezes are full, 30 sparks instead. Miss a day and the strip still doesn't reset.</dd></div>
+      <div><dt>All with sparks</dt><dd>Every cosmetic is bought with sparks, not money.</dd></div>
+    </dl>
+  </section>
+
+  <section class="wrap room" id="macera" aria-labelledby="macera-baslik">
+    <div class="room-head">
+      <h2 id="macera-baslik">Adventure, world and badges</h2>
+      <p>A small world that grows alongside your streak. It all moves forward as you do your tasks.</p>
+    </div>
+    <div class="split">
+      <div class="a8">
+        <ul class="wall" aria-label="33 badges">
+          <li class="badge"><span class="tile-wrap"><span class="tile t-bronze"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-plant"/></svg></span></span><small>First Spark</small></li>
+          <li class="badge"><span class="tile-wrap"><span class="tile t-bronze"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-fire-simple"/></svg></span></span><small>Warming Up</small></li>
+          <li class="badge"><span class="tile-wrap"><span class="tile t-silver"><svg viewBox="0 0 100 110" aria-hidden="true" style="--ko:#FF9F1C;--km:#FFC94D;--kc:#FFF3B0;--ke:#FFE8A3"><use href="#kivi"/></svg></span></span><small>Weekly Flame</small></li>
+          <li class="badge"><span class="tile-wrap"><span class="tile t-gold"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-sun"/></svg></span></span><small>Monthly Fire</small></li>
+          <li class="badge"><span class="tile-wrap"><span class="tile t-gold"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-seal-check"/></svg></span></span><small>Hundredth Day</small></li>
+          <li class="badge"><span class="tile-wrap"><span class="tile t-gold"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-crown"/></svg></span></span><small>A Whole Year</small></li>
+          <li class="badge"><span class="tile-wrap"><span class="tile t-bronze"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-sparkle"/></svg></span></span><small>Flawless</small></li>
+          <li class="badge"><span class="tile-wrap"><span class="tile t-silver"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-diamond"/></svg></span></span><small>Ten Perfect Days</small></li>
+          <li class="badge"><span class="tile-wrap"><span class="tile t-gold"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-trophy"/></svg></span></span><small>Master of Perfection</small></li>
+          <li class="badge"><span class="tile-wrap"><span class="tile t-silver"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-check-circle"/></svg></span></span><small>A Hundred Check-ins</small></li>
+          <li class="badge"><span class="tile-wrap"><span class="tile t-gold"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-rocket-launch"/></svg></span></span><small>Five Hundred Check-ins</small></li>
+          <li class="badge"><span class="tile-wrap"><span class="tile t-gold"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-lightning"/></svg></span></span><small>A Thousand Check-ins</small></li>
+          <li class="badge"><span class="tile-wrap"><span class="tile t-silver"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-sun-horizon"/></svg></span></span><small>Early Bird</small></li>
+          <li class="badge is-locked"><span class="tile-wrap"><span class="tile"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-question"/></svg></span><span class="lock"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-lock-simple"/></svg></span></span><small>Hidden badge</small></li>
+          <li class="badge is-locked"><span class="tile-wrap"><span class="tile"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-question"/></svg></span><span class="lock"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-lock-simple"/></svg></span></span><small>Hidden badge</small></li>
+          <li class="badge"><span class="tile-wrap"><span class="tile t-bronze"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-snowflake"/></svg></span></span><small>Ice Cold</small></li>
+          <li class="badge"><span class="tile-wrap"><span class="tile t-bronze"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-shopping-bag"/></svg></span></span><small>First Purchase</small></li>
+          <li class="badge"><span class="tile-wrap"><span class="tile t-silver"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-gift"/></svg></span></span><small>Collector</small></li>
+          <li class="badge"><span class="tile-wrap"><span class="tile t-silver"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-drop"/></svg></span></span><small>Counter Master</small></li>
+          <li class="badge"><span class="tile-wrap"><span class="tile t-silver"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-timer"/></svg></span></span><small>Focus Master</small></li>
+          <li class="badge"><span class="tile-wrap"><span class="tile t-silver"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-bird"/></svg></span></span><small>Step to Freedom</small></li>
+          <li class="badge"><span class="tile-wrap"><span class="tile t-gold"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-feather"/></svg></span></span><small>Free Spirit</small></li>
+          <li class="badge is-locked"><span class="tile-wrap"><span class="tile"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-question"/></svg></span><span class="lock"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-lock-simple"/></svg></span></span><small>Hidden badge</small></li>
+          <li class="badge is-locked"><span class="tile-wrap"><span class="tile"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-question"/></svg></span><span class="lock"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-lock-simple"/></svg></span></span><small>Hidden badge</small></li>
+          <li class="badge"><span class="tile-wrap"><span class="tile t-bronze"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-floppy-disk"/></svg></span></span><small>Safe and Sound</small></li>
+          <li class="badge"><span class="tile-wrap"><span class="tile t-silver"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-arrow-fat-lines-up"/></svg></span></span><small>Level Ten</small></li>
+          <li class="badge"><span class="tile-wrap"><span class="tile t-bronze"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-target"/></svg></span></span><small>Challenger</small></li>
+          <li class="badge"><span class="tile-wrap"><span class="tile t-bronze"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-toolbox"/></svg></span></span><small>Chest Hunter</small></li>
+          <li class="badge"><span class="tile-wrap"><span class="tile t-silver"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-shield"/></svg></span></span><small>Weekend Warrior</small></li>
+          <li class="badge"><span class="tile-wrap"><span class="tile t-gold"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-medal"/></svg></span></span><small>Perfect Week</small></li>
+          <li class="badge"><span class="tile-wrap"><span class="tile t-silver"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-flame"/></svg></span></span><small>Pure Flame</small></li>
+          <li class="badge"><span class="tile-wrap"><span class="tile t-gold"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-diamonds-four"/></svg></span></span><small>Unbroken</small></li>
+          <li class="badge"><span class="tile-wrap"><span class="tile t-gold"><svg aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-graduation-cap"/></svg></span></span><small>Graduate</small></li>
+        </ul>
+        <p class="note">4 of the 33 badges are hidden: their names stay secret until you find them. The strength of the glow shows whether a badge is bronze, silver or gold.</p>
+        <ul class="plain" style="margin-top:32px">
+          <li><strong>Adventure.</strong> Your baby dragon grows as you feed it, a boss appears every week, and you climb the season path. One skill tree unlocks 6 powers across 3 tiers.</li>
+          <li><strong>Challenges.</strong> A weekly challenge and real-life rewards you set yourself.</li>
+          <li><strong>World.</strong> A tower, an egg, a map, a habit garden, a city and habit cards.</li>
+          <li><strong>Titles.</strong> 9 level titles from Spark to Supernova, plus titles you unlock with badges.</li>
+          <li><strong>Kıvılcım Wrapped.</strong> At the end of the year, the story of your year.</li>
+        </ul>
+      </div>
+      <figure class="shot a4">
+        <div class="frame"><img src="../assets/img/shots/en/macera.webp" width="600" height="1298" loading="lazy" decoding="async" alt="The app's Adventure screen: the baby dragon, the weekly boss and today's surprise card."></div>
+        <figcaption>Screenshot from the app, sample data.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="wrap room" id="istatistik" aria-labelledby="ist-baslik">
+    <div class="room-head">
+      <h2 id="ist-baslik">Know yourself</h2>
+      <p>See the pattern behind your streak: which hours you're good at, which day is hard for you.</p>
+    </div>
+    <figure class="panel chart" style="margin:0">
+      <h3>12-month heatmap</h3>
+      <div class="months" aria-hidden="true"></div>
+      <div class="heat" role="img" aria-label="Sample data: a 12-month heatmap. Active days per month are in the table below."></div>
+      <div class="legend" aria-hidden="true">Less <i style="background:var(--heat-0)"></i><i style="background:var(--heat-1)"></i><i style="background:var(--heat-2)"></i><i style="background:var(--heat-3)"></i><i style="background:var(--heat-4)"></i> More</div>
+      <figcaption>Sample data. Each square is a day; the color shows how much of that day's planned tasks you finished.</figcaption>
+      <table class="sr-only" data-heat-table></table>
+    </figure>
+    <div class="stats-grid">
+      <figure class="panel chart" style="margin:0">
+        <h3>This week</h3>
+        <div class="bars">
+          <div class="bar-col"><span class="v" data-countup>4</span><span class="trk"><span class="fil" style="height:80%"></span></span><span class="d">Mon</span></div>
+          <div class="bar-col"><span class="v" data-countup>3</span><span class="trk"><span class="fil" style="height:60%"></span></span><span class="d">Tue</span></div>
+          <div class="bar-col"><span class="v" data-countup>5</span><span class="trk"><span class="fil" style="height:100%"></span></span><span class="d">Wed</span></div>
+          <div class="bar-col"><span class="v" data-countup>4</span><span class="trk"><span class="fil" style="height:80%"></span></span><span class="d">Thu</span></div>
+          <div class="bar-col"><span class="v" data-countup>2</span><span class="trk"><span class="fil" style="height:40%"></span></span><span class="d">Fri</span></div>
+          <div class="bar-col"><span class="v" data-countup>3</span><span class="trk"><span class="fil" style="height:60%"></span></span><span class="d">Sat</span></div>
+          <div class="bar-col today"><span class="v" data-countup>4</span><span class="trk"><span class="fil" style="height:80%"></span></span><span class="d">Sun</span></div>
+        </div>
+        <figcaption>Sample data: tasks completed each day. Today is orange.</figcaption>
+      </figure>
+      <ul class="plain">
+        <li><strong>Weekly chart, calendar, forecast and records.</strong> See where you are and where you're heading at a glance.</li>
+        <li><strong>Monthly report card and habit strength.</strong> Shows how well each habit has stuck.</li>
+        <li><strong>Patterns.</strong> Finds your best hours; a hard-day forecast warns you in advance.</li>
+        <li><strong>Spark economy screen.</strong> Where your sparks come from and where they go.</li>
+        <li><strong>Automaticity meter.</strong> Measures how automatic a habit has become.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="wrap room" id="rituel" aria-labelledby="rituel-baslik">
+    <div class="room-head">
+      <h2 id="rituel-baslik">Rituals and programs</h2>
+      <p>Start with a guided program and close the day with small rituals.</p>
+    </div>
+    <div class="split">
+      <div class="a7">
+        <figure class="panel chart" style="margin:0">
+          <h3>9 guided programs</h3>
+          <ul class="programs">
+            <li><span class="pn">Hydration in 10 days</span><span class="pb"><i style="width:15.2%"></i></span><span class="pd"><span data-countup>10</span> days</span></li>
+            <li><span class="pn">A calm mind in 14 days</span><span class="pb"><i style="width:21.2%"></i></span><span class="pd"><span data-countup>14</span> days</span></li>
+            <li><span class="pn">Wake up early in 21 days</span><span class="pb"><i style="width:31.8%"></i></span><span class="pd"><span data-countup>21</span> days</span></li>
+            <li><span class="pn">Deep focus in 21 days</span><span class="pb"><i style="width:31.8%"></i></span><span class="pd"><span data-countup>21</span> days</span></li>
+            <li><span class="pn">Get moving in 4 weeks</span><span class="pb"><i style="width:42.4%"></i></span><span class="pd"><span data-countup>28</span> days</span></li>
+            <li><span class="pn">Deep sleep in 28 days</span><span class="pb"><i style="width:42.4%"></i></span><span class="pd"><span data-countup>28</span> days</span></li>
+            <li><span class="pn">A reading habit in 30 days</span><span class="pb"><i style="width:45.5%"></i></span><span class="pd"><span data-countup>30</span> days</span></li>
+            <li><span class="pn">Good posture in 30 days</span><span class="pb"><i style="width:45.5%"></i></span><span class="pd"><span data-countup>30</span> days</span></li>
+            <li><span class="pn">A lasting habit in 66 days</span><span class="pb"><i style="width:100%"></i></span><span class="pd"><span data-countup>66</span> days</span></li>
+          </ul>
+          <figcaption>The bar shows how many days the program lasts.</figcaption>
+        </figure>
+        <ul class="feat" style="margin-top:40px">
+          <li><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-notebook"/></svg><div><h3>Journal</h3><p>Mood, intention, gratitude and “write quietly”. Voice journaling depends on browser support: Chrome and Safari have it, Firefox doesn't.</p></div></li>
+          <li><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-envelope-simple"/></svg><div><h3>Just for you</h3><p>A letter to your future self, a quote book, a dream board and a birthday surprise.</p></div></li>
+          <li><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-wind"/></svg><div><h3>Breathing and Pomodoro</h3><p>A minute of calm breathing or a focus round, all in one place.</p></div></li>
+          <li><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-calendar-plus"/></svg><div><h3>Seasonal packs</h3><p>5 seasonal packs: New Year Resolutions, Winter Energy, Exam Season, Summer Shape and Back to School. Plus a starter quiz.</p></div></li>
+        </ul>
+      </div>
+      <figure class="shot a5">
+        <div class="frame"><img src="../assets/img/shots/en/gunluk.webp" width="600" height="1298" loading="lazy" decoding="async" alt="The app's Close the day screen: mood for the last 14 days, energy, sleep and the day's intention."></div>
+        <figcaption>Screenshot from the app, sample data.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="wrap room" id="nazik" aria-labelledby="nazik-baslik">
+    <div class="room-head">
+      <h2 id="nazik-baslik">A coach that doesn't shame you</h2>
+    </div>
+    <p class="statement">No blame when a streak breaks. Kıvılcım shows how consistent you've been: <span class="num"><span data-countup>27</span> of the last 30 days, <span data-countup>90</span>%.</span></p>
+    <p class="dim" style="margin-top:24px">On a bad day the list gets simpler. If you like, notifications come gently or shrink to one daily summary. You also pick the coach's tone:</p>
+    <ul class="tones">
+      <li><b>Kind friend</b><q>It might be a hard day. A small step still counts.</q></li>
+      <li><b>Tough coach</b><q>No excuses. Get up and finish that task.</q></li>
+      <li><b>Playful</b><q>The couch misses you a lot, but your tasks miss you more.</q></li>
+    </ul>
+  </section>
+
+  <section class="wrap room" id="paylas" aria-labelledby="paylas-baslik">
+    <div class="split">
+      <div class="a7">
+        <h2 id="paylas-baslik">Share, light it together</h2>
+        <ul class="plain" style="margin-top:24px">
+          <li><strong>Cards.</strong> Streak card, weekly summary, report card story and achievement certificate.</li>
+          <li><strong>Together.</strong> Friend duels by QR, pack sharing and joint challenges.</li>
+          <li><strong>Send a cheer.</strong> Support without scores: courage, not competition.</li>
+        </ul>
+      </div>
+      <figure class="share-card a5" style="margin:0" aria-label="Sample streak card">
+        <svg viewBox="0 0 100 110" aria-hidden="true" style="--ko:#2F6BFF;--km:#2FD2FF;--kc:#CFFAFF;--ke:#9FF4FF"><use href="#kivi"/></svg>
+        <div><div class="big" data-countup>39</div><div>day streak, Blue Plasma</div><div class="small">Sample card, sample data</div></div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="wrap room" id="aile" aria-labelledby="aile-baslik">
+    <div class="room-head">
+      <h2 id="aile-baslik">Family, backup and security</h2>
+    </div>
+    <ul class="feat econ">
+      <li><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-users-three"/></svg><div><h3>Family profiles and kid mode</h3><p>Every family member gets their own profile. In kid mode the shop, sharing and outside links are off; leaving it takes the parent gate.</p></div></li>
+      <li><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-lock-key"/></svg><div><h3>Lock</h3><p>PIN lock everywhere. Fingerprint works on Android too; Face ID comes with the iPhone version.</p></div></li>
+      <li><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-file-arrow-up"/></svg><div><h3>Back up and restore</h3><p>File, clipboard or CSV. A local backup is made automatically every day; on phone it can also be written to a cloud folder automatically.</p></div></li>
+      <li><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-shield-check"/></svg><div><h3>Privacy center</h3><p>Shows what is stored and why each permission is asked for. You can delete everything from here.</p></div></li>
+      <li><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-envelope-simple"/></svg><div><h3>Feedback</h3><p>Report a bug or send an idea from inside the app. Your task names and journal aren't added to the message.</p></div></li>
+    </ul>
+  </section>
+
+  <section class="wrap room" id="gorunum" aria-labelledby="gorunum-baslik">
+    <div class="split">
+      <div class="a5" style="display:grid;justify-items:center">
+        <div class="phone" data-theme="night" aria-hidden="true">
+          <div class="screen">
+            <div class="t2">Monday</div>
+            <div class="t1">Today</div>
+            <div class="pills"><span><b data-countup>39</b> days</span><span><b data-countup>640</b> sparks</span></div>
+            <div class="card">
+              <svg viewBox="0 0 100 110"><use href="#kivi"/></svg>
+              <div class="mini-sticks"><i class="on"></i><i class="on"></i><i></i><i></i></div>
+              <div class="next"><span>Next: Drink water</span><b><svg class="ico" style="width:12px;height:12px"><use href="../assets/img/ikonlar.svg#i-check"/></svg></b></div>
+            </div>
+            <div class="row done"><i></i><span>Read a book</span></div>
+            <div class="row done"><i></i><span>Walk</span></div>
+            <div class="row"><i></i><span>Drink water</span></div>
+            <div class="row"><i></i><span>Meditation</span></div>
+            <div class="tabbar"><span>Today</span><span>Stats</span><span>Shop</span><span>Profile</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="a7">
+        <h2 id="gorunum-baslik">Your color</h2>
+        <p class="dim" style="margin-top:16px">The theme picker only paints the phone next to it; give it a try.</p>
+        <fieldset class="themes">
+          <legend>Theme</legend>
+          <div class="theme-list">
+            <span class="theme-opt"><input type="radio" name="tema" id="tema-auto" value="auto" checked><label for="tema-auto"><i style="background:linear-gradient(90deg,#141416 50%,#F2F2F7 50%)"></i>Automatic</label></span>
+            <span class="theme-opt"><input type="radio" name="tema" id="tema-night" value="night"><label for="tema-night"><i style="background:#141416"></i>Night</label></span>
+            <span class="theme-opt"><input type="radio" name="tema" id="tema-amoled" value="amoled"><label for="tema-amoled"><i style="background:#000000"></i>AMOLED</label></span>
+            <span class="theme-opt"><input type="radio" name="tema" id="tema-light" value="light"><label for="tema-light"><i style="background:#F2F2F7"></i>Day</label></span>
+            <span class="theme-opt"><input type="radio" name="tema" id="tema-aurora" value="aurora"><label for="tema-aurora"><i style="background:#2EF2C1"></i>Aurora</label></span>
+            <span class="theme-opt"><input type="radio" name="tema" id="tema-sakura" value="sakura"><label for="tema-sakura"><i style="background:#FF78B4"></i>Sakura</label></span>
+          </div>
+        </fieldset>
+        <ul class="plain">
+          <li><strong>6 theme options.</strong> Automatic follows your device; Night, AMOLED, Day, Aurora and Sakura you pick by hand.</li>
+          <li><strong>Accessibility.</strong> Calm motion, color-blind friendly markers, one-handed use, a sky that follows the time and night softening.</li>
+          <li><strong>Text and haptics.</strong> 3 text sizes on web and desktop; on phone the app follows your system text size. 4 haptic levels on phone.</li>
+          <li><strong>Organizing.</strong> Bulk edit and a task archive.</li>
+          <li><strong>Language.</strong> English and Turkish; it follows your phone's language on first launch.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap room" id="her-cihaz" aria-labelledby="cihaz-baslik">
+    <div class="room-head">
+      <h2 id="cihaz-baslik">On every device</h2>
+      <p>Windows, Mac, Linux, Android and web. Some features depend on the device itself; what works where is below.</p>
+    </div>
+    <figure class="shot shot-wide" style="margin:0 0 40px">
+      <div class="frame"><img src="../assets/img/shots/en/masaustu.webp" width="1200" height="769" loading="lazy" decoding="async" alt="Wide layout: the sidebar on the left, Today and the Hearth in the middle, the weekly chart and heatmap on the right."></div>
+      <figcaption>Wide layout with a sidebar: in the web version and the desktop app (2.5.0). Sample data.</figcaption>
+    </figure>
+    <table class="matrix">
+      <caption>The desktop app is the web version installed on your computer.</caption>
+      <thead>
+        <tr><th scope="col">Feature</th><th scope="col"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-android-logo"/></svg>Android</th><th scope="col"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-globe"/></svg>Web</th><th scope="col"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-desktop"/></svg>Desktop</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">Tasks, streaks, game, stats, rituals</th><td data-l="Android"><span class="yes"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-check"/></svg>Yes</span></td><td data-l="Web"><span class="yes"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-check"/></svg>Yes</span></td><td data-l="Desktop"><span class="yes"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-check"/></svg>Yes</span></td></tr>
+        <tr><th scope="row">Reminder notifications</th><td data-l="Android"><span class="yes"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-check"/></svg>Yes</span></td><td data-l="Web">No</td><td data-l="Desktop">No</td></tr>
+        <tr><th scope="row">Home screen widget</th><td data-l="Android"><span class="yes"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-check"/></svg>Yes</span></td><td data-l="Web">No</td><td data-l="Desktop">No</td></tr>
+        <tr><th scope="row">Lock screen counter</th><td data-l="Android">Beta</td><td data-l="Web">No</td><td data-l="Desktop">No</td></tr>
+        <tr><th scope="row">Step counter tasks</th><td data-l="Android">Beta, while the app is open</td><td data-l="Web">No</td><td data-l="Desktop">No</td></tr>
+        <tr><th scope="row">Location reminders</th><td data-l="Android"><span class="yes"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-check"/></svg>In the background too</span></td><td data-l="Web">Only while the app is open</td><td data-l="Desktop">Not in the background</td></tr>
+        <tr><th scope="row">PIN lock</th><td data-l="Android"><span class="yes"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-check"/></svg>Yes</span></td><td data-l="Web"><span class="yes"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-check"/></svg>Yes</span></td><td data-l="Desktop"><span class="yes"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-check"/></svg>Yes</span></td></tr>
+        <tr><th scope="row">Fingerprint lock</th><td data-l="Android"><span class="yes"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-check"/></svg>Yes</span></td><td data-l="Web">No</td><td data-l="Desktop">No</td></tr>
+        <tr><th scope="row">Automatic backup to a cloud folder</th><td data-l="Android"><span class="yes"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-check"/></svg>Yes</span></td><td data-l="Web">No</td><td data-l="Desktop">No</td></tr>
+        <tr><th scope="row">Quick actions</th><td data-l="Android">No</td><td data-l="Web">When added to the home screen</td><td data-l="Desktop">No</td></tr>
+        <tr><th scope="row">Wide layout with a sidebar</th><td data-l="Android">On wide screens</td><td data-l="Web">Window 840 px and wider</td><td data-l="Desktop"><span class="yes"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-check"/></svg>Yes</span></td></tr>
+        <tr><th scope="row">Keyboard shortcuts</th><td data-l="Android">No</td><td data-l="Web"><span class="yes"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-check"/></svg>Yes</span></td><td data-l="Desktop"><span class="yes"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-check"/></svg>Yes</span></td></tr>
+        <tr><th scope="row">Check-in sound</th><td data-l="Android">No</td><td data-l="Web"><span class="yes"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-check"/></svg>Yes</span></td><td data-l="Desktop"><span class="yes"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-check"/></svg>Yes</span></td></tr>
+      </tbody>
+    </table>
+    <ul class="keys" aria-label="Keyboard shortcuts">
+      <li><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>N</kbd> new task</li>
+      <li><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>1</kbd>–<kbd>4</kbd> sections</li>
+      <li><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>,</kbd> settings</li>
+      <li><kbd>Esc</kbd> back</li>
+    </ul>
+    <ul class="plain" style="margin-top:32px">
+      <li><strong>QR and NFC tags</strong> open the web version: scan the tag and the task is checked off in the web version. Writing NFC tags works in Chrome on Android (beta).</li>
+      <li><strong>Voice assistant shortcuts</strong> have a step-by-step guide in the app; the shortcut opens the web version.</li>
+      <li><strong>The web version</strong> can be added to the home screen. Voice journaling works in Chrome and Safari, not in Firefox.</li>
+      <li><strong>iPhone version coming soon</strong> (App Store and TestFlight). Face ID, Siri and support for iOS Reduce Transparency and Increase Contrast come with the iPhone version.</li>
+    </ul>
+  </section>
+
+  <section class="wrap room" id="degerler" aria-labelledby="deger-baslik">
+    <div class="room-head">
+      <h2 id="deger-baslik">What's missing is a design choice too</h2>
+    </div>
+    <dl class="ledger">
+      <div><dt>Account <span>none</span></dt><dd>Open the app and you're in; no email or password asked.</dd></div>
+      <div><dt>Server <span>none</span></dt><dd>Your tasks, streak and notes stay on your device. Nothing reaches us, so we can't see any of it.</dd></div>
+      <div><dt>Ads <span>none</span></dt><dd>The app has no ad network, analytics tool or tracking kit. This site uses no cookies or outside requests either.</dd></div>
+      <div><dt>Purchases <span>none</span></dt><dd>No subscriptions and no in-app purchases. Every cosmetic is bought with sparks you earn by doing tasks.</dd></div>
+      <div><dt>Internet <span>not needed</span></dt><dd>Kıvılcım works offline.</dd></div>
+    </dl>
+  </section>
+
+  <section class="dl-band" id="indir" aria-labelledby="indir-baslik">
+    <div class="wrap">
+      <div class="room-head">
+        <h2 id="indir-baslik">Download</h2>
+        <p>Every link downloads the latest version. Updating doesn't delete your data.</p>
+      </div>
+      <ul class="dl-grid">
+        <li class="dl-card" data-os="windows">
+          <div class="os"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-windows-logo"/></svg><span class="chip mine-tag">Your device</span></div>
+          <h3>Windows</h3>
+          <p>Windows 10 and 11, 64-bit.</p>
+          <div class="acts"><a class="btn btn-ghost" data-dl href="https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-windows-kurulum.exe"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-download-simple"/></svg>Download (.exe)</a></div>
+        </li>
+        <li class="dl-card" data-os="mac">
+          <div class="os"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-apple-logo"/></svg><span class="chip mine-tag">Your device</span></div>
+          <h3>Mac</h3>
+          <p>Apple Silicon and Intel.</p>
+          <div class="acts"><a class="btn btn-ghost" data-dl href="https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-mac.dmg"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-download-simple"/></svg>Download (.dmg)</a></div>
+        </li>
+        <li class="dl-card" data-os="linux">
+          <div class="os"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-linux-logo"/></svg><span class="chip mine-tag">Your device</span></div>
+          <h3>Linux</h3>
+          <p>AppImage or .deb package.</p>
+          <div class="acts"><a class="btn btn-ghost" data-dl href="https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-linux.AppImage"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-download-simple"/></svg>AppImage</a><a class="btn btn-ghost" data-dl href="https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-linux.deb">.deb</a></div>
+        </li>
+        <li class="dl-card" data-os="android">
+          <div class="os"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-android-logo"/></svg><span class="chip mine-tag">Your device</span></div>
+          <h3>Android</h3>
+          <p>Android 7 and later.</p>
+          <div class="acts"><a class="btn btn-ghost" data-dl href="https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-android.apk"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-download-simple"/></svg>Download (.apk)</a></div>
+        </li>
+        <li class="dl-card soon" data-os="ios">
+          <div class="os"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-device-mobile"/></svg><span class="chip mine-tag">Your device</span></div>
+          <h3>iPhone</h3>
+          <p>Coming soon on the App Store and TestFlight. Until then you can use the web version in Safari.</p>
+          <div class="acts"><a class="btn btn-ghost" href="../uygulama/">Open the web version</a></div>
+        </li>
+        <li class="dl-card" data-os="web">
+          <div class="os"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-globe"/></svg></div>
+          <h3>Web</h3>
+          <p>No install; it opens in your browser and can be added to the home screen. The web version has no reminder notifications.</p>
+          <div class="acts"><a class="btn btn-ghost" href="../uygulama/">Try it in your browser</a></div>
+        </li>
+      </ul>
+      <p class="dl-status" id="dl-status" role="status"></p>
+      <div class="installs">
+        <h3>Install notes</h3>
+        <details><summary>Windows<svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-caret-down"/></svg></summary><p>If a SmartScreen warning appears, choose “More info” and then “Run anyway”.</p></details>
+        <details><summary>Mac<svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-caret-down"/></svg></summary><p>The app is unsigned: on first launch, right-click and choose Open. On macOS 15 and later, System Settings → Privacy & Security → “Open Anyway”.</p></details>
+        <details><summary>Linux<svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-caret-down"/></svg></summary><p>First make the AppImage file executable: <code>chmod +x Kivilcim-linux.AppImage</code>. Or install the .deb package.</p></details>
+        <details><summary>Android<svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-caret-down"/></svg></summary><p>Allow installs from unknown sources when installing.</p></details>
+        <p class="faint" style="margin-top:16px">Updating doesn't delete your data. Earlier versions: <a href="https://github.com/yigit2015/kivilcim-indir/releases">All releases</a>. What changed: <a href="releases/">Release notes</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap room" id="sss" aria-labelledby="sss-baslik" style="padding-bottom:var(--room)">
+    <div class="room-head">
+      <h2 id="sss-baslik">Frequently asked questions</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Do I need an account?<svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-caret-down"/></svg></summary><p>No. Kıvılcım works without an account; your data stays on your phone.</p></details>
+      <details><summary>Does the app cost money?<svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-caret-down"/></svg></summary><p>No. Kıvılcım has no in-app purchases, subscriptions or ads; all themes and programs are free.</p></details>
+      <details><summary>I'm switching phones. Will I lose my data?<svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-caret-down"/></svg></summary><p>Profile → “Back up and restore” → “Create and share a backup file” to make a file; on the new phone, tap “Choose a file” on the same screen. If you pick a cloud folder, backups are written automatically.</p></details>
+      <details><summary>I want to delete all my data.<svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-caret-down"/></svg></summary><p>Profile → “Privacy center” → “Erase everything”. Type DELETE in the box to confirm. This can't be undone.</p></details>
+    </div>
+    <p style="margin-top:24px">For all questions and contact details, see the <a href="support/">Support page</a>.</p>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <ul class="foot-links">
+      <li><a href="releases/">Releases</a></li>
+      <li><a href="../gizlilik/#english">Privacy</a></li>
+      <li><a href="support/">Support</a></li>
+      <li><a href="https://github.com/yigit2015/kivilcim-indir/releases">All downloads</a></li>
+      <li><a href="https://github.com/yigit2015/kivilcim-indir"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-github-logo"/></svg>GitHub</a></li>
+    </ul>
+    <button class="btn btn-ghost btn-sm calm-toggle" type="button" aria-pressed="false">Calm motion<span class="faint" aria-hidden="true" data-calm-hint>Off</span></button>
+    <small>Kıvılcım is a free habit app. This site uses no cookies, analytics or outside requests. Icons: Phosphor (MIT). Fonts: Geologica and Inter (SIL Open Font License). Motion: GSAP (GreenSock standard no-charge license).</small>
+  </div>
+</footer>
+</body>
+</html>

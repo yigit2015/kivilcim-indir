@@ -2,6 +2,8 @@
    Yay eğrileri Reanimated 4.5.1 withSpring denkleminden örneklendi (pop: damping 14, stiffness 260, mass 4). */
 (function () {
   'use strict';
+  // Sayfa dili: /en/ sayfaları İngilizce metinleri kullanır.
+  var EN = document.documentElement.lang === 'en';
   var KV = window.KV || { calm: false, onMotion: function () {}, watchLoop: function () {} };
   var canLinear = window.CSS && CSS.supports && CSS.supports('animation-timing-function', 'linear(0, 1)');
   var POP = canLinear ? 'linear(0, 0.008 0.4%, 0.03 0.8%, 0.066 1.3%, 0.115 1.7%, 0.174 2.1%, 0.243 2.5%, 0.319 2.9%, 0.402 3.3%, 0.581 4.2%, 0.857 5.4%, 1.03 6.3%, 1.11 6.7%, 1.184 7.1%, 1.251 7.5%, 1.311 7.9%, 1.363 8.3%, 1.406 8.8%, 1.441 9.2%, 1.468 9.6%, 1.486 10%, 1.495 10.4%, 1.497 10.8%, 1.491 11.3%, 1.477 11.7%, 1.458 12.1%, 1.432 12.5%, 1.401 12.9%, 1.365 13.3%, 1.284 14.2%, 1.057 16.3%, 0.972 17.1%, 0.898 17.9%, 0.865 18.3%, 0.812 19.2%, 0.792 19.6%, 0.776 20%, 0.764 20.4%, 0.756 20.8%, 0.753 21.3%, 0.753 21.7%, 0.765 22.5%, 0.776 22.9%, 0.806 23.8%, 0.866 25%, 1 27.5%, 1.039 28.3%, 1.071 29.2%, 1.097 30%, 1.106 30.4%, 1.113 30.8%, 1.122 31.7%, 1.122 32.5%, 1.109 33.8%, 1.084 35%, 0.997 38.3%, 0.97 39.6%, 0.956 40.4%, 0.946 41.3%, 0.939 42.5%, 0.941 43.8%, 0.95 45%, 1.003 49.2%, 1.02 50.8%, 1.027 52.1%, 1.03 53.3%, 1.026 55.4%, 0.993 60.8%, 0.985 63.7%, 0.987 66.3%, 1.003 71.3%, 1.007 74.2%, 0.996 85%, 1.002 95%, 1)' : 'cubic-bezier(0.34, 1.56, 0.64, 1)';
@@ -109,7 +111,7 @@
 
   // ── Ocak ──────────────────────────────────────────────────────────────────
   if (hearth) {
-    var TASKS = ['Su iç', '10 sayfa oku', '15 dakika yürü', 'Nefes egzersizi', 'Günlüğe yaz', 'Esneme'];
+    var TASKS = EN ? ['Drink water', 'Read 10 pages', 'Walk 15 minutes', 'Breathing exercise', 'Write in your journal', 'Stretch'] : ['Su iç', '10 sayfa oku', '15 dakika yürü', 'Nefes egzersizi', 'Günlüğe yaz', 'Esneme'];
     var sticks = $$('.stick', hearth);
     var glow = $('.hearth-glow', hearth);
     var counter = $('.counter', hearth);
@@ -193,8 +195,8 @@
       nextRow.hidden = all;
       doneRow.hidden = !all;
       if (!all) {
-        nextText.textContent = 'Sıradaki: ' + TASKS[lit];
-        checkBtn.setAttribute('aria-label', 'Sıradaki görevi tamamla: ' + TASKS[lit]);
+        nextText.textContent = (EN ? 'Next: ' : 'Sıradaki: ') + TASKS[lit];
+        checkBtn.setAttribute('aria-label', (EN ? 'Complete the next task: ' : 'Sıradaki görevi tamamla: ') + TASKS[lit]);
       }
     };
     var cheer = function () {
@@ -260,7 +262,7 @@
         row.classList.add(kind === 'done' ? 'is-done' : 'is-joker');
         setX(0);
         if (!calm()) row.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 260, easing: EASE_OUT });
-        status.textContent = kind === 'done' ? 'Tamamlandı: +10 kıvılcım. Serin bugün de yandı.' : 'Jokerle atlandı: bugünkü görev serini bozmadan geçti.';
+        status.textContent = kind === 'done' ? (EN ? 'Done: +10 sparks. Your streak is lit for today.' : 'Tamamlandı: +10 kıvılcım. Serin bugün de yandı.') : EN ? 'Skipped with a joker: today’s task passed without breaking your streak.' : 'Jokerle atlandı: bugünkü görev serini bozmadan geçti.';
       });
     };
     row.addEventListener('pointerdown', function (e) {
@@ -310,7 +312,7 @@
   var journey = $('.journey');
   if (journey) {
     var TH = [0, 7, 30, 100, 365];
-    var NAMES = ['Turuncu Alev', 'Altın Alev', 'Mavi Plazma', 'Mor Nova', 'Beyaz Yıldız'];
+    var NAMES = EN ? ['Orange Flame', 'Gold Flame', 'Blue Plasma', 'Purple Nova', 'White Star'] : ['Turuncu Alev', 'Altın Alev', 'Mavi Plazma', 'Mor Nova', 'Beyaz Yıldız'];
     var count = $('[data-day]', journey);
     var tierName = $('[data-tier]', journey);
     var nextEl = $('[data-next-tier]', journey);
@@ -331,7 +333,7 @@
       if (tier !== shownTier) {
         shownTier = tier;
         tierName.textContent = NAMES[tier];
-        nextEl.textContent = tier < 4 ? TH[tier + 1] + '. günde ' + NAMES[tier + 1] : 'Bir yıl: alevin artık Beyaz Yıldız.';
+        nextEl.textContent = tier < 4 ? (EN ? NAMES[tier + 1] + ' on day ' + TH[tier + 1] : TH[tier + 1] + '. günde ' + NAMES[tier + 1]) : EN ? 'One year: your flame is now a White Star.' : 'Bir yıl: alevin artık Beyaz Yıldız.';
         svgs.forEach(function (s, k) { s.classList.toggle('is-on', k === tier); });
         rays.forEach(function (s, k) { s.classList.toggle('is-on', k === tier); });
       }
@@ -388,8 +390,8 @@
     var months = $('.months');
     var table = $('[data-heat-table]');
     var rnd = (function (a) { return function () { a |= 0; a = (a + 0x6d2b79f5) | 0; var t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; })(20260928);
-    var MN = ['Oca', 'Şub', 'Mar', 'Nis', 'May', 'Haz', 'Tem', 'Ağu', 'Eyl', 'Eki', 'Kas', 'Ara'];
-    var MN_LONG = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
+    var MN = EN ? ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'] : ['Oca', 'Şub', 'Mar', 'Nis', 'May', 'Haz', 'Tem', 'Ağu', 'Eyl', 'Eki', 'Kas', 'Ara'];
+    var MN_LONG = EN ? ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'] : ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
     var today = new Date();
     today.setHours(12, 0, 0, 0);
     var dow = (today.getDay() + 6) % 7; // Pazartesi 0
@@ -456,7 +458,7 @@
         total += perMonth[k];
         rows += '<tr><th scope="row">' + MN_LONG[+parts[1]] + ' ' + parts[0] + '</th><td>' + perMonth[k] + '</td></tr>';
       });
-      table.innerHTML = '<caption>Örnek veri: son 12 ayda ' + total + ' aktif gün</caption><thead><tr><th scope="col">Ay</th><th scope="col">Aktif gün</th></tr></thead><tbody>' + rows + '</tbody>';
+      table.innerHTML = (EN ? '<caption>Sample data: ' + total + ' active days in the last 12 months</caption><thead><tr><th scope="col">Month</th><th scope="col">Active days</th></tr></thead><tbody>' : '<caption>Örnek veri: son 12 ayda ' + total + ' aktif gün</caption><thead><tr><th scope="col">Ay</th><th scope="col">Aktif gün</th></tr></thead><tbody>') + rows + '</tbody>';
     }
     if (animate) once(heat, 0.3, function () {
       heat.offsetWidth; // başlangıç durumunu kaydet
@@ -487,7 +489,7 @@
       sweepMs = calm() ? 2200 : 900;
       slowNote.hidden = !calm();
       result.innerHTML = '';
-      btn.textContent = 'Durdur';
+      btn.textContent = EN ? 'Stop' : 'Durdur';
       t0 = performance.now();
       var wpx = width();
       if (hasAnim) {
@@ -505,8 +507,8 @@
       needle.style.transform = 'translateX(' + (p * width()).toFixed(1) + 'px)';
       var m = multAt(p);
       if (!calm() && hasAnim) flash.animate([{ opacity: 0 }, { opacity: 1, offset: 120 / 500 }, { opacity: 0.35 }], { duration: 500, fill: 'forwards' });
-      result.innerHTML = '<div class="mult">x' + m + '</div><div class="gain">' + 10 * m + ' kıvılcım</div><p>' + (m >= 10 ? 'Tam ortadan! Kıvı çok sevindi.' : 'Yarın yeni bir sandık seni bekliyor.') + '</p>';
-      btn.textContent = 'Tekrar aç';
+      result.innerHTML = '<div class="mult">x' + m + '</div><div class="gain">' + 10 * m + (EN ? ' sparks' : ' kıvılcım') + '</div><p>' + (m >= 10 ? (EN ? 'Right in the middle! Kıvı is thrilled.' : 'Tam ortadan! Kıvı çok sevindi.') : EN ? 'A new chest is waiting for you tomorrow.' : 'Yarın yeni bir sandık seni bekliyor.') + '</p>';
+      btn.textContent = EN ? 'Open again' : 'Tekrar aç';
     };
     btn.addEventListener('click', function () {
       if (state === 'run') stop();

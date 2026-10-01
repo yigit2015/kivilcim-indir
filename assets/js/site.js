@@ -4,6 +4,8 @@
   var d = document.documentElement;
   var KEY = 'kivilcim-site-calm';
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  // Sayfa dili: /en/ sayfaları İngilizce metinleri kullanır.
+  var EN = document.documentElement.lang === 'en';
   var stored = null;
   try { stored = window.localStorage.getItem(KEY); } catch (e) { stored = null; }
 
@@ -22,7 +24,7 @@
       toggles[i].setAttribute('aria-pressed', calm ? 'true' : 'false');
       toggles[i].disabled = reduce.matches;
       var hint = toggles[i].querySelector('[data-calm-hint]');
-      if (hint) hint.textContent = reduce.matches ? 'Açık (sistem ayarı)' : calm ? 'Açık' : 'Kapalı';
+      if (hint) hint.textContent = reduce.matches ? (EN ? 'On (system setting)' : 'Açık (sistem ayarı)') : calm ? (EN ? 'On' : 'Açık') : EN ? 'Off' : 'Kapalı';
     }
     for (var j = 0; j < listeners.length; j++) listeners[j](calm);
   }
@@ -50,7 +52,7 @@
   var syncTheme = function () {
     var chosen = d.getAttribute('data-theme');
     for (var i = 0; i < metas.length; i++) metas[i].setAttribute('content', chosen ? (chosen === 'dark' ? '#141416' : '#F2F2F7') : metaOrig[i]);
-    var label = effectiveTheme() === 'dark' ? 'Açık temaya geç' : 'Koyu temaya geç';
+    var label = effectiveTheme() === 'dark' ? (EN ? 'Switch to light theme' : 'Açık temaya geç') : EN ? 'Switch to dark theme' : 'Koyu temaya geç';
     var btns = document.querySelectorAll('[data-theme-toggle]');
     for (var j = 0; j < btns.length; j++) { btns[j].setAttribute('aria-label', label); btns[j].title = label; }
   };
@@ -115,7 +117,7 @@
       if (!btn) return;
       btn.hidden = false;
       if (v.paused) btn.removeAttribute('data-playing'); else btn.setAttribute('data-playing', '');
-      btn.setAttribute('aria-label', v.paused ? 'Kaydı oynat' : 'Kaydı duraklat');
+      btn.setAttribute('aria-label', v.paused ? (EN ? 'Play recording' : 'Kaydı oynat') : EN ? 'Pause recording' : 'Kaydı duraklat');
     };
     v.addEventListener('play', sync);
     v.addEventListener('pause', sync);
@@ -147,11 +149,11 @@
     return null;
   }
   var OS = {
-    windows: { label: 'Windows için indir', href: BASE + 'Kivilcim-windows-kurulum.exe' },
-    mac: { label: 'Mac için indir', href: BASE + 'Kivilcim-mac.dmg' },
-    linux: { label: 'Linux için indir', href: BASE + 'Kivilcim-linux.AppImage' },
-    android: { label: 'Android için indir', href: BASE + 'Kivilcim-android.apk' },
-    ios: { label: 'Tarayıcıda dene', href: WEB, web: true }
+    windows: { label: EN ? 'Download for Windows' : 'Windows için indir', href: BASE + 'Kivilcim-windows-kurulum.exe' },
+    mac: { label: EN ? 'Download for Mac' : 'Mac için indir', href: BASE + 'Kivilcim-mac.dmg' },
+    linux: { label: EN ? 'Download for Linux' : 'Linux için indir', href: BASE + 'Kivilcim-linux.AppImage' },
+    android: { label: EN ? 'Download for Android' : 'Android için indir', href: BASE + 'Kivilcim-android.apk' },
+    ios: { label: EN ? 'Try it in your browser' : 'Tarayıcıda dene', href: WEB, web: true }
   };
   var os = detectOS();
   KV.os = os;
@@ -213,10 +215,10 @@
     var status = document.getElementById(a.getAttribute('data-status') || 'dl-status');
     if (status) {
       status.innerHTML = '';
-      status.appendChild(document.createTextNode('İndirme bağlantısı açıldı; tarayıcının indirmeler listesine bak. Başlamadıysa: '));
+      status.appendChild(document.createTextNode(EN ? 'The download link opened; check your browser’s downloads. If it didn’t start: ' : 'İndirme bağlantısı açıldı; tarayıcının indirmeler listesine bak. Başlamadıysa: '));
       var l = document.createElement('a');
       l.href = 'https://github.com/yigit2015/kivilcim-indir/releases';
-      l.textContent = 'Tüm sürümler';
+      l.textContent = EN ? 'All releases' : 'Tüm sürümler';
       status.appendChild(l);
     }
   });
