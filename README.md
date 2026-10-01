@@ -50,6 +50,12 @@
   </tr>
 </table>
 
+## Tanıtım filmi
+
+30 saniye, sesli. Görüntüler uygulamadan, kullanıcı ve veriler örnektir.
+
+https://github.com/user-attachments/assets/8faaa3ea-f29c-4d0d-84ee-c61087552e53
+
 ## Neler var
 
 <table>
