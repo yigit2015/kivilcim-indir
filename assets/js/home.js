@@ -167,28 +167,33 @@
     });
   }
 
-  // ── Ocak ──────────────────────────────────────────────────────────────────
+  // ── Bugünün görevleri: yörünge demosu ─────────────────────────────────────
   if (hearth) {
-    var TASKS = EN ? ['Drink water', 'Read 10 pages', 'Walk 15 minutes', 'Breathing exercise', 'Write in your journal', 'Stretch'] : ['Su iç', '10 sayfa oku', '15 dakika yürü', 'Nefes egzersizi', 'Günlüğe yaz', 'Esneme'];
-    var sticks = $$('.stick', hearth);
+    var bubbles = $$('.bubble', hearth);
+    var arc = $('.ring-arc', hearth);
     var glow = $('.hearth-glow', hearth);
     var counter = $('.counter', hearth);
     var countNum = $('[data-count]', hearth);
     var nextRow = $('.next-row', hearth);
-    var nextText = $('[data-next]', hearth);
-    var checkBtn = $('.check-btn', hearth);
+    var statusText = $('[data-status]', hearth);
     var doneRow = $('.done-row', hearth);
     var againBtn = $('[data-again]', hearth);
     var layer = $('.spark-layer', hearth);
     var hop = kivi ? $('.hop', kivi) : null;
-    var lit = 0;
+    var orbitEl = $('.orbit', hearth);
+    var done = 0;
     var sparks = 0;
     var busy = 0;
 
-    var setGlow = function () {
-      glow.style.transition = calm() ? 'none' : '';
-      glow.style.opacity = String(0.35 + 0.65 * (lit / sticks.length));
-    };
+    // Baloncuklar çemberin üstüne eşit açıyla dizilir: ilki saat 12'de, sıra saat yönünde.
+    bubbles.forEach(function (b, i) {
+      var slot = b.parentNode;
+      var ang = -Math.PI / 2 + (2 * Math.PI * i) / bubbles.length;
+      slot.style.left = (50 + 38 * Math.cos(ang)).toFixed(2) + '%';
+      slot.style.top = (50 + 38 * Math.sin(ang)).toFixed(2) + '%';
+    });
+    if (orbitEl) KV.watchLoop(orbitEl);
+
     var bump = function () {
       sparks += 10;
       countNum.textContent = String(sparks);
@@ -205,8 +210,8 @@
       var h = hearth.getBoundingClientRect();
       return { x: r.left - h.left + r.width * ax, y: r.top - h.top + r.height * ay };
     };
-    var fly = function (stick, done) {
-      var from = rel(stick, 0.5, 0.2);
+    var fly = function (bubble, done) {
+      var from = rel(bubble, 0.5, 0.35);
       var to = rel(counter, 0.18, 0.5);
       var left = 3;
       for (var i = 0; i < 3; i++) {
@@ -233,63 +238,64 @@
         })(s);
       }
     };
-    var ignite = function (i, k) {
-      var st = sticks[i];
-      var fire = $('.fire', st);
-      st.classList.add('is-lit');
-      if (calm()) {
-        if (hasAnim) fire.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 160 });
-        bump();
-        return;
-      }
-      hint(fire, true);
-      fire.animate([{ transform: 'scaleY(0.6)', opacity: 0 }, { transform: 'scaleY(1)', opacity: 1 }], { duration: POP_MS, delay: k * 90, easing: POP, fill: 'backwards' })
-        .onfinish = function () { hint(fire, false); };
-      busy += 1;
-      setTimeout(function () { fly(st, function () { busy -= 1; bump(); }); }, 160 + k * 90);
-    };
+    // Halka, ışıma ve durum satırı tek yerden güncellenir.
     var render = function () {
-      var all = lit >= sticks.length;
+      var all = done >= bubbles.length;
+      var left = bubbles.length - done;
+      arc.style.transition = calm() ? 'none' : '';
+      arc.style.strokeDashoffset = String(100 - (100 * done) / bubbles.length);
+      arc.classList.toggle('is-empty', done === 0);
+      glow.style.transition = calm() ? 'none' : '';
+      glow.style.opacity = String(0.35 + 0.65 * (done / bubbles.length));
       nextRow.hidden = all;
       doneRow.hidden = !all;
-      if (!all) {
-        nextText.textContent = (EN ? 'Next: ' : 'Sıradaki: ') + TASKS[lit];
-        checkBtn.setAttribute('aria-label', (EN ? 'Complete the next task: ' : 'Sıradaki görevi tamamla: ') + TASKS[lit]);
-      }
+      if (!all) statusText.textContent = EN ? left + (left === 1 ? ' task left' : ' tasks left') : left + ' görev kaldı';
     };
     var cheer = function () {
       if (calm() || !hop) return;
       hop.animate([{ transform: 'translateY(0)' }, { transform: 'translateY(-16px)' }], { duration: 230, easing: OUT_QUAD })
         .onfinish = function () { hop.animate([{ transform: 'translateY(-16px)' }, { transform: 'translateY(0)' }], { duration: 260, easing: IN_QUAD }); };
     };
-    var advance = function (count) {
-      for (var k = 0; k < count && lit < sticks.length; k++) { ignite(lit, k); lit += 1; }
-      setGlow();
+    var complete = function (b, k) {
+      b.setAttribute('aria-pressed', 'true');
+      done += 1;
       render();
-      if (lit >= sticks.length) {
-        var wait = calm() ? 0 : 160 + 620 + 3 * 55;
-        setTimeout(function () { cheer(); if (document.activeElement === checkBtn || document.activeElement === document.body) againBtn.focus(); }, wait);
-      }
+      if (calm()) { bump(); return; }
+      busy += 1;
+      setTimeout(function () { fly(b, function () { busy -= 1; bump(); }); }, k * 90);
     };
-    checkBtn.addEventListener('click', function () { advance(1); });
-    againBtn.addEventListener('click', function () {
-      sticks.forEach(function (st) {
-        st.classList.remove('is-lit');
-        var f = $('.fire', st);
-        f.getAnimations().forEach(function (a) { a.cancel(); });
-        if (hasAnim) f.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 160 });
+    var undo = function (b) {
+      b.setAttribute('aria-pressed', 'false');
+      done -= 1;
+      sparks = Math.max(0, sparks - 10);
+      countNum.textContent = String(sparks);
+      render();
+    };
+    bubbles.forEach(function (b) {
+      b.addEventListener('click', function () {
+        if (b.getAttribute('aria-pressed') === 'true') { undo(b); return; }
+        complete(b, 0);
+        if (done >= bubbles.length) {
+          var wait = calm() ? 0 : 620 + 3 * 55;
+          setTimeout(function () { cheer(); if (document.activeElement === b || document.activeElement === document.body) againBtn.focus(); }, wait);
+        }
       });
-      lit = 0;
+    });
+    againBtn.addEventListener('click', function () {
+      bubbles.forEach(function (b) { b.setAttribute('aria-pressed', 'false'); });
+      done = 0;
       sparks = 0;
       countNum.textContent = '0';
-      setGlow();
       render();
-      checkBtn.focus();
+      bubbles[0].focus();
     });
     render();
-    setGlow();
-    // Bölümün %40'ı görününce ilk iki çıta yanar.
-    once(hearth, 0.4, function () { setTimeout(function () { advance(2); }, calm() ? 0 : 450 + introMs); });
+    // Bölümün %40'ı görününce ilk iki görev tamamlanır.
+    once(hearth, 0.4, function () {
+      setTimeout(function () {
+        for (var k = 0; k < 2 && k < bubbles.length; k++) complete(bubbles[k], k);
+      }, calm() ? 0 : 450 + introMs);
+    });
   }
 
   // ── Kaydırma demosu: sağa tamamla, sola jokerle atla ──────────────────────

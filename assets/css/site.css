@@ -747,32 +747,6 @@ html { scrollbar-color: var(--line) var(--bg); }
   pointer-events: none;
 }
 .kivi-hero { width: clamp(108px, 22vw, 150px); height: auto; overflow: visible; }
-.sticks {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 12px;
-  margin-top: var(--s4);
-  height: 72px;
-}
-.stick {
-  position: relative;
-  width: clamp(28px, 7vw, 40px);
-  height: 100%;
-  border-radius: 14px 14px 5px 5px;
-  background: var(--stick-unlit);
-  border: 1px solid var(--orange-a45);
-}
-.stick .fire {
-  position: absolute;
-  inset: -1px;
-  border-radius: inherit;
-  background: linear-gradient(180deg, var(--flame-1), var(--flame-2) 55%, var(--flame-3));
-  box-shadow: 0 0 12px rgba(255, 122, 26, 0.27);
-  transform-origin: 50% 100%;
-  opacity: 0;
-}
-.stick.is-lit .fire { opacity: 1; }
 .next-row {
   display: flex;
   align-items: center;
@@ -783,23 +757,67 @@ html { scrollbar-color: var(--line) var(--bg); }
 }
 .next-row p { margin: 0; color: var(--text-dim); }
 .next-row .done-title { color: var(--text); font-weight: 600; }
-.check-btn {
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  flex: none;
+.hearth .note { text-align: center; }
+/* Bugünün görevleri: yörünge demosu (ana sayfa). Kıvı ortada, çevresinde ilerleme halkası, görevler baloncuk. */
+.orbit { position: relative; width: min(100%, 320px); aspect-ratio: 1; margin-inline: auto; container-type: inline-size; }
+.orbit-ring { position: absolute; left: 50%; top: 50%; width: 38%; height: 38%; margin: -19% 0 0 -19%; transform: rotate(-90deg); overflow: visible; pointer-events: none; }
+.orbit-ring circle { fill: none; stroke-width: 8; }
+.orbit-ring .ring-track { stroke: var(--glass-line); }
+.orbit-ring .ring-arc { stroke: url(#ring-g); stroke-linecap: round; stroke-dasharray: 100 100; stroke-dashoffset: 100; transition: stroke-dashoffset var(--base, 260ms) var(--ease-out); }
+.orbit-ring .ring-arc.is-empty { opacity: 0; }
+.orbit .kivi-hero { position: absolute; inset: 0; margin: auto; width: 25%; height: auto; aspect-ratio: 100 / 110; }
+.orbit-spin { position: absolute; inset: 0; }
+.orbit .slot { position: absolute; width: 24%; aspect-ratio: 1; margin: -12% 0 0 -12%; }
+.bubble {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  width: 100%;
+  height: 100%;
+  padding: 6%;
   border-radius: 50%;
-  border: 1.5px solid var(--orange);
-  background: var(--orange-a12);
-  color: var(--orange-text);
+  border: 1px solid var(--glass-line);
+  background: var(--glass-solid);
+  color: var(--text);
+  font: 600 max(11.5px, 3.9cqw) / 1.15 var(--font-body);
+  text-align: center;
   cursor: pointer;
-  transition: transform var(--fast) var(--ease-out);
+  position: relative;
+  transition: transform var(--fast) var(--ease-out), background-color var(--fast) var(--ease-out), border-color var(--fast) var(--ease-out);
   -webkit-tap-highlight-color: transparent;
 }
-.check-btn:active { transform: scale(0.9); }
-.check-btn .ico { width: 20px; height: 20px; }
-.hearth .note { text-align: center; }
+.bubble .ico { width: 26%; height: auto; aspect-ratio: 1; color: var(--orange-text); flex: none; }
+.bubble:active { transform: scale(0.94); }
+.bubble[aria-pressed="true"] { background: var(--orange-a12); border-color: var(--orange-a45); color: var(--text-dim); }
+.bubble[aria-pressed="true"]::after {
+  content: "✓";
+  position: absolute;
+  right: 2%;
+  top: 4%;
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--orange);
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 800;
+  border: 2px solid var(--bg);
+}
+@media (prefers-reduced-motion: no-preference) {
+  html:not([data-motion="calm"]) .orbit-spin { animation: orbit-turn 80s linear infinite; }
+  html:not([data-motion="calm"]) .orbit .bubble { animation: orbit-turn 80s linear infinite reverse; }
+  html:not([data-motion="calm"]) .orbit:hover .orbit-spin,
+  html:not([data-motion="calm"]) .orbit:hover .bubble,
+  html:not([data-motion="calm"]) .orbit:focus-within .orbit-spin,
+  html:not([data-motion="calm"]) .orbit:focus-within .bubble { animation-play-state: paused; }
+}
+@keyframes orbit-turn { to { transform: rotate(360deg); } }
+html[data-motion="calm"] .bubble:active { transform: none; }
+
 .spark-layer { position: absolute; inset: 0; pointer-events: none; overflow: visible; z-index: 5; }
 .spark {
   position: absolute;
@@ -1216,17 +1234,21 @@ html[data-motion="calm"] .journey-mode .ladder { position: static !important; wi
 .screen .t2 { color: var(--p-dim); font-size: 12px; }
 .screen .pills { display: flex; gap: 6px; margin-top: 10px; }
 .screen .pills span { padding: 3px 9px; border-radius: 999px; border: 1px solid var(--p-orange); color: var(--p-text); font-size: 11px; font-weight: 600; }
-.screen .card { margin-top: 12px; padding: 12px; border-radius: 18px; background: var(--p-surface); border: 1px solid var(--p-line); }
-.screen .card svg { width: 54px; margin: 0 auto; }
-.screen .mini-sticks { display: flex; justify-content: center; gap: 6px; margin-top: 6px; height: 26px; align-items: flex-end; }
-.screen .mini-sticks i { width: 14px; height: 100%; border-radius: 7px 7px 3px 3px; border: 1px solid var(--p-orange); opacity: 0.8; }
-.screen .mini-sticks i.on { background: linear-gradient(180deg, #FFC24B, #FF7A1A 55%, #FF4A2B); border-color: transparent; opacity: 1; }
-.screen .next { display: flex; justify-content: space-between; align-items: center; margin-top: 8px; color: var(--p-dim); font-size: 12px; }
-.screen .next b { width: 22px; height: 22px; border-radius: 50%; border: 1.5px solid var(--p-orange); display: grid; place-items: center; color: var(--p-orange); }
-.screen .row { display: flex; align-items: center; gap: 10px; margin-top: 8px; padding: 10px 12px; border-radius: 14px; background: var(--p-surface); border: 1px solid var(--p-line); font-weight: 600; font-size: 12.5px; }
-.screen .row i { width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid var(--p-orange); flex: none; }
-.screen .row.done i { background: var(--p-orange); }
-.screen .row.done span { color: var(--p-dim); text-decoration: line-through; }
+.screen .t3 { display: flex; justify-content: space-between; align-items: baseline; margin-top: 16px; font-size: 13px; font-weight: 700; }
+.screen .t3 b { color: var(--p-text); font-variant-numeric: tabular-nums; }
+.screen .mini-next { margin-top: 8px; padding: 12px; border-radius: 14px; background: var(--p-surface); border: 1px solid var(--p-line); font-size: 13px; font-weight: 600; }
+.screen .orbit-mini { position: relative; width: 168px; height: 168px; margin: 8px auto 0; }
+.screen .orbit-mini .mini-ring { position: absolute; left: 50%; top: 50%; width: 78px; height: 78px; margin: -39px 0 0 -39px; transform: rotate(-90deg); }
+.screen .orbit-mini .mini-ring circle { fill: none; stroke-width: 8; }
+.screen .orbit-mini .mini-ring .t { stroke: var(--p-line); }
+.screen .orbit-mini .mini-ring .a { stroke: var(--p-orange); stroke-linecap: round; stroke-dasharray: 100 100; stroke-dashoffset: 50; }
+.screen .orbit-mini .mini-kivi { position: absolute; left: 50%; top: 50%; width: 36px; margin: -20px 0 0 -18px; }
+.screen .orbit-mini .b { position: absolute; width: 38px; height: 38px; margin: -19px 0 0 -19px; border-radius: 50%; border: 1px solid var(--p-line); background: var(--p-surface); }
+.screen .orbit-mini .b.on { border-color: var(--p-orange); background: color-mix(in srgb, var(--p-orange) 18%, var(--p-surface)); }
+.screen .orbit-mini .b1 { left: 50%; top: 11%; }
+.screen .orbit-mini .b2 { left: 89%; top: 50%; }
+.screen .orbit-mini .b3 { left: 50%; top: 89%; }
+.screen .orbit-mini .b4 { left: 11%; top: 50%; }
 .screen .tabbar { position: absolute; left: 12px; right: 12px; bottom: 14px; display: flex; justify-content: space-around; padding: 8px; border-radius: 999px; background: var(--p-surface-hi); color: var(--p-dim); font-size: 10px; }
 .screen .tabbar span:first-child { color: var(--p-orange); font-weight: 700; }
 .screen-ghost { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
@@ -1664,7 +1686,6 @@ details > p { padding: 0 var(--s5) var(--s5); color: var(--text-dim); margin: 0;
 @media (prefers-reduced-motion: reduce) {
   .btn:active,
   .btn.is-pressed,
-  .check-btn:active { transform: none; }
   .btn { transition: none; }
   summary .ico { transition: none; }
   .nav a::after,
@@ -1677,7 +1698,6 @@ details > p { padding: 0 var(--s5) var(--s5); color: var(--text-dim); margin: 0;
 }
 html[data-motion="calm"] .btn:active,
 html[data-motion="calm"] .btn.is-pressed,
-html[data-motion="calm"] .check-btn:active { transform: none; }
 html[data-motion="calm"] .btn { transition: none; }
 html[data-motion="calm"] summary .ico { transition: none; }
 html[data-motion="calm"] .nav a::after,

@@ -78,12 +78,18 @@
 
       <div class="hearth" role="group" aria-labelledby="ocak-adi">
         <div class="hearth-top">
-          <p class="faint" id="ocak-adi">The Hearth: a sample day</p>
+          <p class="faint" id="ocak-adi">Today's tasks: a sample day</p>
           <span class="pill counter"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0.5C12.9 7.2 16.8 11.1 23.5 12C16.8 12.9 12.9 16.8 12 23.5C11.1 16.8 7.2 12.9 0.5 12C7.2 11.1 11.1 7.2 12 0.5Z" fill="url(#spark-g)"/></svg><span class="num" data-count>0</span><span class="sr-only"> sparks</span></span>
         </div>
         <div class="hearth-stage">
           <div class="orb" aria-hidden="true"></div>
           <div class="hearth-glow" aria-hidden="true"></div>
+          <div class="orbit">
+            <svg class="orbit-ring" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+              <defs><linearGradient id="ring-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFC24B"/><stop offset="1" stop-color="#FF4A2B"/></linearGradient></defs>
+              <circle class="ring-track" cx="60" cy="60" r="54"/>
+              <circle class="ring-arc is-empty" cx="60" cy="60" r="54" pathLength="100"/>
+            </svg>
           <svg class="kivi kivi-hero" viewBox="0 0 100 110" aria-hidden="true" focusable="false">
             <g class="hop"><g class="body">
               <path d="M50 2 C55 12 63 17 67 25 C71 22 73 17 73 12 C83 22 91 37 90 55 C94 58 96 64 94 71 C92 93 74 107 50 107 C26 107 8 93 6 71 C4 64 6 58 10 55 C9 39 18 28 29 20 C31 26 35 29 40 27 C40 17 44 9 50 2 Z" fill="#E8442E"/>
@@ -96,24 +102,24 @@
               </g>
             </g></g>
           </svg>
-          <div class="sticks" aria-hidden="true">
-            <span class="stick"><span class="fire"></span></span>
-            <span class="stick"><span class="fire"></span></span>
-            <span class="stick"><span class="fire"></span></span>
-            <span class="stick"><span class="fire"></span></span>
-            <span class="stick"><span class="fire"></span></span>
-            <span class="stick"><span class="fire"></span></span>
+            <div class="orbit-spin">
+              <span class="slot"><button class="bubble" type="button" aria-pressed="false"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-drop"/></svg><span>Drink water</span></button></span>
+              <span class="slot"><button class="bubble" type="button" aria-pressed="false"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-notebook"/></svg><span>10 sayfa oku</span></button></span>
+              <span class="slot"><button class="bubble" type="button" aria-pressed="false"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-sneaker"/></svg><span>Walk 15 min</span></button></span>
+              <span class="slot"><button class="bubble" type="button" aria-pressed="false"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-wind"/></svg><span>Nefes</span></button></span>
+              <span class="slot"><button class="bubble" type="button" aria-pressed="false"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-feather"/></svg><span>Journal</span></button></span>
+              <span class="slot"><button class="bubble" type="button" aria-pressed="false"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-plant"/></svg><span>Esneme</span></button></span>
+            </div>
           </div>
         </div>
         <div class="next-row">
-          <p data-next aria-live="polite">Next: Drink water</p>
-          <button class="check-btn" type="button" aria-label="Complete the next task: Drink water"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-check"/></svg></button>
+          <p data-status aria-live="polite">6 tasks left</p>
         </div>
         <div class="next-row done-row" hidden>
           <p class="done-title" role="status">Today's fire is lit</p>
           <button class="btn btn-ghost btn-sm" type="button" data-again><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-arrow-counter-clockwise"/></svg>Light it again</button>
         </div>
-        <p class="note">A demo with sample tasks. In the app every task is a log; check them off and the logs catch fire.</p>
+        <p class="note">A try-out with sample tasks. In the app Kıvı stays in the middle and your tasks circle around it as bubbles; the ring shows the day's progress.</p>
         <div class="spark-layer" aria-hidden="true"></div>
       </div>
     </div>
@@ -158,13 +164,13 @@
 
   <section class="wrap room" id="ocak" aria-labelledby="ocak-baslik">
     <div class="room-head">
-      <h2 id="ocak-baslik">The Hearth and today</h2>
-      <p>In the Hearth on the home screen, every task is a log. You finish tasks with one tap or a swipe; the next task is always within reach.</p>
+      <h2 id="ocak-baslik">Today: Kıvı and your tasks</h2>
+      <p>On the home screen Kıvı stays in the middle and today's tasks float around it as bubbles. Tap to complete; hold for options. The ring shows the day's progress and closes completely when every task is done.</p>
     </div>
     <div class="split">
       <div class="a5">
         <div class="panel swipe-wrap" role="group" aria-labelledby="kaydir-baslik">
-          <h3 id="kaydir-baslik">Try swiping</h3>
+          <h3 id="kaydir-baslik">Try swiping in the task list</h3>
           <p class="faint">Swipe right: complete. Swipe left: skip with a joker.</p>
           <div class="swipe">
             <div class="swipe-under" aria-hidden="true">
@@ -182,7 +188,7 @@
         </div>
         <figure class="shot" style="margin-top:32px">
           <div class="frame">
-            <video class="loop-video" muted loop playsinline preload="none" width="600" height="1298" poster="../assets/img/shots/en/dongu-ilk.webp" aria-label="Recorded in the app: on the Today screen, checking off the next task sets a log in the Hearth alight and the streak goes from 38 to 39 days; two more check-ins and three logs are burning.">
+            <video class="loop-video" muted loop playsinline preload="none" width="600" height="1298" poster="../assets/img/shots/en/dongu-ilk.webp" aria-label="Recording from the app: as you tap the task bubbles on the Today screen, the ring around Kıvı fills, the streak goes from 38 to 39 days; after two more taps the ring is three quarters full.">
               <source src="../assets/video/dongu-en.mp4" type="video/mp4">
               <source src="../assets/video/dongu-en.webm" type="video/webm">
             </video>
@@ -192,6 +198,7 @@
         </figure>
       </div>
       <ul class="feat a7">
+        <li><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-target"/></svg><div><h3>Up next: one thing</h3><p>Only one card sits below the home screen at a time: the chest if it is ready, a letter if you have one, closing the day in the evening.</p></div></li>
         <li><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-check-circle"/></svg><div><h3>A repeat that fits you</h3><p>Every day, a few times a week or on set days. Pick a habit to build or a habit to quit; for quitting, clean days are counted.</p></div></li>
         <li><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-timer"/></svg><div><h3>Start small, grow it</h3><p>Counters, timers, sub-steps and a mini version. The goal can rise by itself week by week.</p></div></li>
         <li><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-bell"/></svg><div><h3>Reminders on time</h3><p>Per task, a heads-up 15 minutes before and “did you do it?” 60 minutes after. Notifications can be normal, gentle or one daily summary.</p><div class="chips"><span class="chip"><svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-device-mobile"/></svg>On phone</span></div></div></li>
@@ -475,16 +482,15 @@
             <div class="t2">Monday</div>
             <div class="t1">Today</div>
             <div class="pills"><span><b data-countup>39</b> days</span><span><b data-countup>640</b> sparks</span></div>
-            <div class="card">
-              <svg viewBox="0 0 100 110"><use href="#kivi"/></svg>
-              <div class="mini-sticks"><i class="on"></i><i class="on"></i><i></i><i></i></div>
-              <div class="next"><span>Next: Drink water</span><b><svg class="ico" style="width:12px;height:12px"><use href="../assets/img/ikonlar.svg#i-check"/></svg></b></div>
+            <div class="t3"><span>Today's tasks</span><b>2/4</b></div>
+            <div class="orbit-mini">
+              <svg class="mini-ring" viewBox="0 0 120 120"><circle class="t" cx="60" cy="60" r="54"/><circle class="a" cx="60" cy="60" r="54" pathLength="100"/></svg>
+              <svg class="mini-kivi" viewBox="0 0 100 110"><use href="#kivi"/></svg>
+              <i class="b b1 on"></i><i class="b b2"></i><i class="b b3 on"></i><i class="b b4"></i>
             </div>
-            <div class="row done"><i></i><span>Read a book</span></div>
-            <div class="row done"><i></i><span>Walk</span></div>
-            <div class="row"><i></i><span>Drink water</span></div>
-            <div class="row"><i></i><span>Meditation</span></div>
-            <div class="tabbar"><span>Today</span><span>Stats</span><span>Shop</span><span>Profile</span></div>
+            <div class="t3"><span>Up next</span></div>
+            <div class="mini-next">Your chest is ready!</div>
+            <div class="tabbar"><span>Today</span><span>Progress</span><span>Rewards</span><span>Profile</span></div>
           </div>
         </div>
       </div>
@@ -519,8 +525,8 @@
       <p>Windows, Mac, Linux, Android and web. Some features depend on the device itself; what works where is below.</p>
     </div>
     <figure class="shot shot-wide" style="margin:0 0 40px">
-      <div class="frame"><img src="../assets/img/shots/en/masaustu.webp" width="1200" height="769" loading="lazy" decoding="async" alt="Wide layout: the sidebar on the left, Today and the Hearth in the middle, the weekly chart and heatmap on the right."></div>
-      <figcaption>Wide layout with a sidebar: in the web version and the desktop app (2.5.0). Sample data.</figcaption>
+      <div class="frame"><img src="../assets/img/shots/en/masaustu.webp" width="1200" height="769" loading="lazy" decoding="async" alt="Wide layout: a sidebar on the left, Today with the task orbit in the middle, a weekly chart and a heatmap on the right."></div>
+      <figcaption>Wide layout with a sidebar: in the web version and the desktop app. Sample data.</figcaption>
     </figure>
     <table class="matrix">
       <caption>The desktop app is the web version installed on your computer.</caption>

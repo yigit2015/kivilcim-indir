@@ -78,12 +78,18 @@
 
       <div class="hearth" role="group" aria-labelledby="ocak-adi">
         <div class="hearth-top">
-          <p class="faint" id="ocak-adi">Ocak: örnek bir gün</p>
+          <p class="faint" id="ocak-adi">Bugünün görevleri: örnek bir gün</p>
           <span class="pill counter"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0.5C12.9 7.2 16.8 11.1 23.5 12C16.8 12.9 12.9 16.8 12 23.5C11.1 16.8 7.2 12.9 0.5 12C7.2 11.1 11.1 7.2 12 0.5Z" fill="url(#spark-g)"/></svg><span class="num" data-count>0</span><span class="sr-only"> kıvılcım</span></span>
         </div>
         <div class="hearth-stage">
           <div class="orb" aria-hidden="true"></div>
           <div class="hearth-glow" aria-hidden="true"></div>
+          <div class="orbit">
+            <svg class="orbit-ring" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+              <defs><linearGradient id="ring-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFC24B"/><stop offset="1" stop-color="#FF4A2B"/></linearGradient></defs>
+              <circle class="ring-track" cx="60" cy="60" r="54"/>
+              <circle class="ring-arc is-empty" cx="60" cy="60" r="54" pathLength="100"/>
+            </svg>
           <svg class="kivi kivi-hero" viewBox="0 0 100 110" aria-hidden="true" focusable="false">
             <g class="hop"><g class="body">
               <path d="M50 2 C55 12 63 17 67 25 C71 22 73 17 73 12 C83 22 91 37 90 55 C94 58 96 64 94 71 C92 93 74 107 50 107 C26 107 8 93 6 71 C4 64 6 58 10 55 C9 39 18 28 29 20 C31 26 35 29 40 27 C40 17 44 9 50 2 Z" fill="#E8442E"/>
@@ -96,24 +102,24 @@
               </g>
             </g></g>
           </svg>
-          <div class="sticks" aria-hidden="true">
-            <span class="stick"><span class="fire"></span></span>
-            <span class="stick"><span class="fire"></span></span>
-            <span class="stick"><span class="fire"></span></span>
-            <span class="stick"><span class="fire"></span></span>
-            <span class="stick"><span class="fire"></span></span>
-            <span class="stick"><span class="fire"></span></span>
+            <div class="orbit-spin">
+              <span class="slot"><button class="bubble" type="button" aria-pressed="false"><svg class="ico" aria-hidden="true"><use href="assets/img/ikonlar.svg#i-drop"/></svg><span>Su iç</span></button></span>
+              <span class="slot"><button class="bubble" type="button" aria-pressed="false"><svg class="ico" aria-hidden="true"><use href="assets/img/ikonlar.svg#i-notebook"/></svg><span>10 sayfa oku</span></button></span>
+              <span class="slot"><button class="bubble" type="button" aria-pressed="false"><svg class="ico" aria-hidden="true"><use href="assets/img/ikonlar.svg#i-sneaker"/></svg><span>15 dk yürü</span></button></span>
+              <span class="slot"><button class="bubble" type="button" aria-pressed="false"><svg class="ico" aria-hidden="true"><use href="assets/img/ikonlar.svg#i-wind"/></svg><span>Nefes</span></button></span>
+              <span class="slot"><button class="bubble" type="button" aria-pressed="false"><svg class="ico" aria-hidden="true"><use href="assets/img/ikonlar.svg#i-feather"/></svg><span>Günlüğe yaz</span></button></span>
+              <span class="slot"><button class="bubble" type="button" aria-pressed="false"><svg class="ico" aria-hidden="true"><use href="assets/img/ikonlar.svg#i-plant"/></svg><span>Esneme</span></button></span>
+            </div>
           </div>
         </div>
         <div class="next-row">
-          <p data-next aria-live="polite">Sıradaki: Su iç</p>
-          <button class="check-btn" type="button" aria-label="Sıradaki görevi tamamla: Su iç"><svg class="ico" aria-hidden="true"><use href="assets/img/ikonlar.svg#i-check"/></svg></button>
+          <p data-status aria-live="polite">6 görev kaldı</p>
         </div>
         <div class="next-row done-row" hidden>
           <p class="done-title" role="status">Bugünün ateşi tamam</p>
           <button class="btn btn-ghost btn-sm" type="button" data-again><svg class="ico" aria-hidden="true"><use href="assets/img/ikonlar.svg#i-arrow-counter-clockwise"/></svg>Baştan yak</button>
         </div>
-        <p class="note">Örnek görevlerle deneme. Uygulamada her görev bir çıta; tikledikçe çıtalar tutuşur.</p>
+        <p class="note">Örnek görevlerle deneme. Uygulamada Kıvı ortada durur, görevlerin çevresinde baloncuk olarak döner; halka günün ilerlemesini gösterir.</p>
         <div class="spark-layer" aria-hidden="true"></div>
       </div>
     </div>
@@ -158,13 +164,13 @@
 
   <section class="wrap room" id="ocak" aria-labelledby="ocak-baslik">
     <div class="room-head">
-      <h2 id="ocak-baslik">Ocak ve bugün</h2>
-      <p>Ana ekrandaki Ocak'ta her görev bir çıta. Görevleri tek dokunuşla ya da kaydırarak bitirirsin; sıradaki görev hep elinin altında durur.</p>
+      <h2 id="ocak-baslik">Bugün: Kıvı ve görevlerin</h2>
+      <p>Ana ekranda Kıvı ortada durur, bugünün görevleri çevresinde baloncuk olarak süzülür. Dokun, tamamla; basılı tut, seçenekler açılsın. Halka günün ilerlemesini gösterir ve her görev bitince tam kapanır.</p>
     </div>
     <div class="split">
       <div class="a5">
         <div class="panel swipe-wrap" role="group" aria-labelledby="kaydir-baslik">
-          <h3 id="kaydir-baslik">Kaydırarak dene</h3>
+          <h3 id="kaydir-baslik">Görev listesinde kaydırarak dene</h3>
           <p class="faint">Sağa kaydır: tamamla. Sola kaydır: jokerle atla.</p>
           <div class="swipe">
             <div class="swipe-under" aria-hidden="true">
@@ -182,7 +188,7 @@
         </div>
         <figure class="shot" style="margin-top:32px">
           <div class="frame">
-            <video class="loop-video" muted loop playsinline preload="none" width="600" height="1298" poster="assets/img/shots/dongu-ilk.webp" aria-label="Uygulamadan kayıt: Bugün ekranında sıradaki görev tiklenince Ocak'taki çıta tutuşuyor, seri 38'den 39 güne çıkıyor; iki görev daha tiklenince üç çıta yanıyor.">
+            <video class="loop-video" muted loop playsinline preload="none" width="600" height="1298" poster="assets/img/shots/dongu-ilk.webp" aria-label="Uygulamadan kayıt: Bugün ekranında görev baloncuklarına dokunuldukça Kıvı'nın çevresindeki halka doluyor, seri 38'den 39 güne çıkıyor; iki görev daha tiklenince halka dörtte üçe varıyor.">
               <source src="assets/video/dongu.mp4" type="video/mp4">
               <source src="assets/video/dongu.webm" type="video/webm">
             </video>
@@ -192,6 +198,7 @@
         </figure>
       </div>
       <ul class="feat a7">
+        <li><svg class="ico" aria-hidden="true"><use href="assets/img/ikonlar.svg#i-target"/></svg><div><h3>Sırada: tek şey</h3><p>Ana ekranın altında aynı anda yalnız bir kart durur: sandığın hazırsa sandık, bir mektubun varsa mektup, akşamsa günü kapatma.</p></div></li>
         <li><svg class="ico" aria-hidden="true"><use href="assets/img/ikonlar.svg#i-check-circle"/></svg><div><h3>Sana uyan tekrar</h3><p>Her gün, haftada birkaç kez ya da belirli günlerde. Yapılacak bir alışkanlık da seçebilirsin, bırakılacak bir alışkanlık da; bırakmada temiz günler sayılır.</p></div></li>
         <li><svg class="ico" aria-hidden="true"><use href="assets/img/ikonlar.svg#i-timer"/></svg><div><h3>Küçük başla, büyüt</h3><p>Sayaç, zamanlayıcı, alt adım ve mini versiyon. Hedef haftadan haftaya kendiliğinden artabilir.</p></div></li>
         <li><svg class="ico" aria-hidden="true"><use href="assets/img/ikonlar.svg#i-bell"/></svg><div><h3>Saatinde hatırlatma</h3><p>Görev başına 15 dakika önce haber, 60 dakika sonra “yaptın mı?”. Bildirim biçimi normal, nazik ya da günde tek özet olabilir.</p><div class="chips"><span class="chip"><svg class="ico" aria-hidden="true"><use href="assets/img/ikonlar.svg#i-device-mobile"/></svg>Telefonda</span></div></div></li>
@@ -475,16 +482,15 @@
             <div class="t2">Pazartesi</div>
             <div class="t1">Bugün</div>
             <div class="pills"><span><b data-countup>39</b> gün</span><span><b data-countup>640</b> kıvılcım</span></div>
-            <div class="card">
-              <svg viewBox="0 0 100 110"><use href="#kivi"/></svg>
-              <div class="mini-sticks"><i class="on"></i><i class="on"></i><i></i><i></i></div>
-              <div class="next"><span>Sıradaki: Su iç</span><b><svg class="ico" style="width:12px;height:12px"><use href="assets/img/ikonlar.svg#i-check"/></svg></b></div>
+            <div class="t3"><span>Bugünün görevleri</span><b>2/4</b></div>
+            <div class="orbit-mini">
+              <svg class="mini-ring" viewBox="0 0 120 120"><circle class="t" cx="60" cy="60" r="54"/><circle class="a" cx="60" cy="60" r="54" pathLength="100"/></svg>
+              <svg class="mini-kivi" viewBox="0 0 100 110"><use href="#kivi"/></svg>
+              <i class="b b1 on"></i><i class="b b2"></i><i class="b b3 on"></i><i class="b b4"></i>
             </div>
-            <div class="row done"><i></i><span>Kitap oku</span></div>
-            <div class="row done"><i></i><span>Yürüyüş</span></div>
-            <div class="row"><i></i><span>Su iç</span></div>
-            <div class="row"><i></i><span>Meditasyon</span></div>
-            <div class="tabbar"><span>Bugün</span><span>İstatistik</span><span>Mağaza</span><span>Profil</span></div>
+            <div class="t3"><span>Sırada</span></div>
+            <div class="mini-next">Sandığın hazır!</div>
+            <div class="tabbar"><span>Bugün</span><span>İlerleme</span><span>Ödüller</span><span>Profil</span></div>
           </div>
         </div>
       </div>
@@ -519,8 +525,8 @@
       <p>Windows, Mac, Linux, Android ve web. Bazı özellikler cihazın kendisine bağlı; hangisinin nerede çalıştığı aşağıda.</p>
     </div>
     <figure class="shot shot-wide" style="margin:0 0 40px">
-      <div class="frame"><img src="assets/img/shots/masaustu.webp" width="1200" height="769" loading="lazy" decoding="async" alt="Geniş ekran düzeni: solda kenar çubuğu, ortada Bugün ve Ocak, sağda haftalık grafik ve ısı haritası."></div>
-      <figcaption>Kenar çubuklu geniş düzen: web sürümünde ve masaüstü uygulamasında (2.5.0). Örnek veri.</figcaption>
+      <div class="frame"><img src="assets/img/shots/masaustu.webp" width="1200" height="769" loading="lazy" decoding="async" alt="Geniş ekran düzeni: solda kenar çubuğu, ortada Bugün ve görev yörüngesi, sağda haftalık grafik ve ısı haritası."></div>
+      <figcaption>Kenar çubuklu geniş düzen: web sürümünde ve masaüstü uygulamasında. Örnek veri.</figcaption>
     </figure>
     <table class="matrix">
       <caption>Masaüstü uygulaması, web sürümünün bilgisayara kurulan hâlidir.</caption>
