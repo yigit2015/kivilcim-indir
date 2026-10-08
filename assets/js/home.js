@@ -109,6 +109,64 @@
     KV.onMotion(function (c) { if (c) { kivi.classList.remove('is-tracking'); eyes.style.transform = ''; target.x = target.y = cur.x = cur.y = 0; } });
   }
 
+  // ── Köşe Kıvı'sı: ana Kıvı ekrandan çıkınca sağ altta belirir, imleci sürekli izler ──
+  // Gözler ve gövde imlece döner; imleç pencereden çıkınca ortaya döner. Yalnız fareli ortamda, sade hareket kapalıyken.
+  if (kivi && hasAnim && fine.matches) {
+    var peek = document.createElement('span');
+    peek.className = 'kivi-peek';
+    peek.setAttribute('aria-hidden', 'true');
+    peek.innerHTML = kivi.outerHTML
+      .replace('class="kivi kivi-hero"', 'class="kivi"')
+      .replace('<g class="hop"><g class="body">', '<g class="look"><g class="body">')
+      .replace(/<\/g><\/g>\s*<\/svg>$/, '</g></g></svg>');
+    document.body.appendChild(peek);
+    var pk = peek.firstElementChild;
+    var pkEyes = $('.eyes', pk);
+    var pkLook = $('.look', pk);
+    var heroSeen = true;
+    var look = { x: 0, y: 0 };
+    var shown = { x: 0, y: 0 };
+    var pkRaf = 0;
+    var pkLast = 0;
+    var setShown = function () { peek.classList.toggle('is-on', !heroSeen && !calm()); };
+    var pkTick = function (now) {
+      var dt = pkLast ? now - pkLast : 16;
+      pkLast = now;
+      var k = 1 - Math.exp(-dt / 110);
+      shown.x += (look.x - shown.x) * k;
+      shown.y += (look.y - shown.y) * k;
+      pkEyes.style.transform = 'translate(' + (shown.x * 5.5).toFixed(2) + 'px,' + (shown.y * 4.5).toFixed(2) + 'px)';
+      pkLook.style.transform = 'rotate(' + (shown.x * 9).toFixed(2) + 'deg) translateX(' + (shown.x * 3).toFixed(2) + 'px)';
+      if (Math.abs(look.x - shown.x) + Math.abs(look.y - shown.y) > 0.004) pkRaf = requestAnimationFrame(pkTick);
+      else { pkRaf = 0; pkLast = 0; }
+    };
+    var aim = function (x, y) {
+      look.x = x;
+      look.y = y;
+      if (!pkRaf) pkRaf = requestAnimationFrame(pkTick);
+    };
+    window.addEventListener('pointermove', function (e) {
+      if (!peek.classList.contains('is-on') || e.pointerType !== 'mouse') return;
+      var r = pk.getBoundingClientRect();
+      var dx = e.clientX - (r.left + r.width / 2);
+      var dy = e.clientY - (r.top + r.height * 0.6);
+      var dist = Math.sqrt(dx * dx + dy * dy) || 1;
+      var m = Math.min(1, dist / 160);
+      pk.classList.add('is-tracking');
+      aim((dx / dist) * m, (dy / dist) * m);
+    }, { passive: true });
+    document.documentElement.addEventListener('mouseleave', function () { aim(0, 0); });
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (es) { heroSeen = es[0].isIntersecting; setShown(); }).observe(kivi);
+    } else { heroSeen = false; setShown(); }
+    pk.classList.add('is-alive');
+    KV.watchLoop(pk);
+    KV.onMotion(function (c) {
+      if (c) { pk.classList.remove('is-tracking'); pkEyes.style.transform = ''; pkLook.style.transform = ''; look.x = look.y = shown.x = shown.y = 0; }
+      setShown();
+    });
+  }
+
   // ── Ocak ──────────────────────────────────────────────────────────────────
   if (hearth) {
     var TASKS = EN ? ['Drink water', 'Read 10 pages', 'Walk 15 minutes', 'Breathing exercise', 'Write in your journal', 'Stretch'] : ['Su iç', '10 sayfa oku', '15 dakika yürü', 'Nefes egzersizi', 'Günlüğe yaz', 'Esneme'];

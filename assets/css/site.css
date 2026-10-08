@@ -1711,3 +1711,21 @@ html[data-motion="calm"] .theme-btn .ico { transform: none !important; }
   .loop-toggle { border: 1px solid ButtonText; }
   .cell { forced-color-adjust: none; }
 }
+
+/* ── Köşe Kıvı'sı (ana sayfa): ana Kıvı ekrandan çıkınca sağ altta belirir ve imleci izler ─────────── */
+.kivi-peek {
+  position: fixed;
+  right: clamp(12px, 2.4vw, 32px);
+  bottom: 0;
+  z-index: calc(var(--z-header) - 10);
+  width: 64px;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity var(--fast) var(--ease-out), transform var(--slow, 420ms) var(--ease-out);
+}
+.kivi-peek.is-on { opacity: 1; transform: translateY(10%); }
+.kivi-peek .kivi { display: block; width: 100%; height: auto; overflow: visible; }
+.kivi .look { transform-box: fill-box; transform-origin: 50% 100%; }
+html[data-motion="calm"] .kivi-peek { display: none; }
+@media (hover: none), (pointer: coarse) { .kivi-peek { display: none; } }
