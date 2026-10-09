@@ -26,27 +26,27 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/readme/showcase-dark-en.webp">
-  <img src=".github/readme/showcase-light-en.webp" width="100%" alt="Kıvılcım on desktop with the wide sidebar layout, and on phone with the Today, Adventure and Close the day screens.">
+  <img src=".github/readme/showcase-light-en.webp" width="100%" alt="Kıvılcım on desktop with the wide sidebar layout, and on phone with the Today (task orbit), Adventure and Close the day screens.">
 </picture>
 
 <sub>Screenshots from the app, sample data.</sub>
 
 </div>
 
-## One tap, one log
+## One tap, one step
 
 <table>
   <tr>
     <td width="300" valign="top">
       <picture>
         <source media="(prefers-color-scheme: dark)" srcset=".github/readme/dongu-dark-en.webp">
-        <img src=".github/readme/dongu-light-en.webp" width="280" alt="Kıvılcım's Today screen: checking off the next task lights a log in the Hearth and the streak goes from 38 to 39 days; two more check-offs and three logs are burning.">
+        <img src=".github/readme/dongu-light-en.webp" width="280" alt="Kıvılcım's Today screen: tapping task bubbles fills the ring around Kıvı and the streak goes from 38 to 39 days; two more check-offs and the ring reaches three quarters.">
       </picture>
     </td>
     <td valign="top">
 
-1. **Check off the next task.** The line under the Hearth always shows your next task; one tap is enough.
-2. **A log catches fire.** Every task is a log. As you finish them, the fire under Kıvı grows.
+1. **Tap a bubble.** Kıvı stays in the middle and today's tasks float around it as bubbles. Tap to finish; press and hold for options.
+2. **The ring fills.** Every task fills the ring around Kıvı a little more. When all are done, the ring closes.
 3. **Your streak grows.** The day's first check-in adds a day to your streak and marks today on the week strip.
 
 <sub>Recorded in the app, sample data.</sub>
@@ -67,8 +67,8 @@
   <tr>
     <td width="50%" valign="top">
       <img src=".github/readme/icons/ocak.svg" width="28" alt=""><br>
-      <b>The Hearth</b><br>
-      Every task is a log; check them off and the logs catch fire. Your next task is always within reach.
+      <b>The orbit</b><br>
+      Tasks are bubbles around Kıvı; the ring shows the day's progress. The "Up next" card below suggests one next step.
     </td>
     <td width="50%" valign="top">
       <img src=".github/readme/icons/seri.svg" width="28" alt=""><br>

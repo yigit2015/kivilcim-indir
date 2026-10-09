@@ -26,27 +26,27 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/readme/showcase-dark.webp">
-  <img src=".github/readme/showcase-light.webp" width="100%" alt="Kıvılcım masaüstünde kenar çubuklu geniş düzenle, telefonda Bugün, Macera ve Günü kapat ekranlarıyla.">
+  <img src=".github/readme/showcase-light.webp" width="100%" alt="Kıvılcım masaüstünde kenar çubuklu geniş düzenle, telefonda Bugün (görev yörüngesi), Macera ve Günü kapat ekranlarıyla.">
 </picture>
 
 <sub>Uygulamadan ekran görüntüleri, örnek veri.</sub>
 
 </div>
 
-## Bir tik, bir çıta
+## Bir dokunuş, bir adım
 
 <table>
   <tr>
     <td width="300" valign="top">
       <picture>
         <source media="(prefers-color-scheme: dark)" srcset=".github/readme/dongu-dark.webp">
-        <img src=".github/readme/dongu-light.webp" width="280" alt="Kıvılcım'ın Bugün ekranı: sıradaki görev tiklenince Ocak'taki çıta tutuşuyor, seri 38'den 39 güne çıkıyor; iki görev daha tiklenince üç çıta yanıyor.">
+        <img src=".github/readme/dongu-light.webp" width="280" alt="Kıvılcım'ın Bugün ekranı: görev baloncuklarına dokunuldukça Kıvı'nın çevresindeki halka doluyor, seri 38'den 39 güne çıkıyor; iki görev daha tiklenince halka dörtte üçe varıyor.">
       </picture>
     </td>
     <td valign="top">
 
-1. **Sıradaki görevi tikle.** Ocak'ın altındaki satır hep sıradaki görevi gösterir; tek dokunuş yeter.
-2. **Çıta tutuşur.** Her görev bir çıta. Tamamladıkça Kıvı'nın altındaki ateş büyür.
+1. **Baloncuğa dokun.** Kıvı ortada durur, bugünün görevleri çevresinde baloncuk olarak süzülür. Dokun, tamamla; basılı tut, seçenekler açılsın.
+2. **Halka dolar.** Her görev Kıvı'nın çevresindeki halkayı biraz daha doldurur. Hepsi bitince halka tam kapanır.
 3. **Seri büyür.** Günün ilk tikiyle seri bir gün uzar, hafta şeridinde bugün işaretlenir.
 
 <sub>Uygulamadan kayıt, örnek veri.</sub>
@@ -67,8 +67,8 @@ https://github.com/user-attachments/assets/8faaa3ea-f29c-4d0d-84ee-c61087552e53
   <tr>
     <td width="50%" valign="top">
       <img src=".github/readme/icons/ocak.svg" width="28" alt=""><br>
-      <b>Ocak</b><br>
-      Her görev bir çıta; tikledikçe çıtalar tutuşur. Sıradaki görev hep elinin altında.
+      <b>Yörünge</b><br>
+      Görevler Kıvı'nın çevresinde baloncuk; halka günün ilerlemesini gösterir. Altındaki "Sırada" kartı tek bir sonraki adımı önerir.
     </td>
     <td width="50%" valign="top">
       <img src=".github/readme/icons/seri.svg" width="28" alt=""><br>
