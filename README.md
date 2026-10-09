@@ -1,33 +1,27 @@
 <p align="right">
-<picture><source media="(prefers-color-scheme: dark)" srcset=".github/readme/btn-lang-tr-on-dark.png"><img src=".github/readme/btn-lang-tr-on-light.png" height="36" alt="Türkçe (bu sayfa)"></picture>
-<a href="README.en.md"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/readme/btn-lang-en-off-dark.png"><img src=".github/readme/btn-lang-en-off-light.png" height="36" alt="English"></picture></a>
+<img src=".github/readme/btn-lang-tr-on-dark.png" height="36" alt="Türkçe (bu sayfa)">
+<a href="README.en.md"><img src=".github/readme/btn-lang-en-off-dark.png" height="36" alt="English"></a>
 </p>
 
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset=".github/readme/hero-dark.svg">
-  <img src=".github/readme/hero-light.svg" width="100%" alt="Kıvılcım: Küçük görevler, büyüyen bir alev. Ücretsiz, oyunlaştırılmış alışkanlık uygulaması.">
-</picture>
+<img src=".github/readme/hero-dark.svg" width="100%" alt="Kıvılcım: Küçük görevler, büyüyen bir alev. Ücretsiz, oyunlaştırılmış alışkanlık uygulaması.">
 
 <br>
 
-<a href="https://yigit2015.github.io/kivilcim-indir/#indir"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/readme/btn-indir-dark.png"><img src=".github/readme/btn-indir-light.png" height="44" alt="Kıvılcım'ı indir"></picture></a>&nbsp;
-<a href="https://yigit2015.github.io/kivilcim-indir/uygulama/"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/readme/btn-web-dark.png"><img src=".github/readme/btn-web-light.png" height="44" alt="Tarayıcıda dene"></picture></a>
+<a href="https://yigit2015.github.io/kivilcim-indir/#indir"><img src=".github/readme/btn-indir-dark.png" height="44" alt="Kıvılcım'ı indir"></a>&nbsp;
+<a href="https://yigit2015.github.io/kivilcim-indir/uygulama/"><img src=".github/readme/btn-web-dark.png" height="44" alt="Tarayıcıda dene"></a>
 
-<a href="https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-windows-kurulum.exe"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/readme/btn-windows-dark.png"><img src=".github/readme/btn-windows-light.png" height="44" alt="Windows için indir (.exe)"></picture></a>&nbsp;
-<a href="https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-mac.dmg"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/readme/btn-mac-dark.png"><img src=".github/readme/btn-mac-light.png" height="44" alt="Mac için indir (.dmg)"></picture></a>&nbsp;
-<a href="https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-linux.AppImage"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/readme/btn-linux-dark.png"><img src=".github/readme/btn-linux-light.png" height="44" alt="Linux için indir (AppImage)"></picture></a>&nbsp;
-<a href="https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-android.apk"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/readme/btn-android-dark.png"><img src=".github/readme/btn-android-light.png" height="44" alt="Android için indir (.apk)"></picture></a>
+<a href="https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-windows-kurulum.exe"><img src=".github/readme/btn-windows-dark.png" height="44" alt="Windows için indir (.exe)"></a>&nbsp;
+<a href="https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-mac.dmg"><img src=".github/readme/btn-mac-dark.png" height="44" alt="Mac için indir (.dmg)"></a>&nbsp;
+<a href="https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-linux.AppImage"><img src=".github/readme/btn-linux-dark.png" height="44" alt="Linux için indir (AppImage)"></a>&nbsp;
+<a href="https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-android.apk"><img src=".github/readme/btn-android-dark.png" height="44" alt="Android için indir (.apk)"></a>
 
 <sub>Hesap yok · Reklam yok · Satın alma yok · iPhone sürümü yakında</sub>
 
 <br><br>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset=".github/readme/showcase-dark.webp">
-  <img src=".github/readme/showcase-light.webp" width="100%" alt="Kıvılcım masaüstünde kenar çubuklu geniş düzenle, telefonda Bugün (görev yörüngesi), Macera ve Günü kapat ekranlarıyla.">
-</picture>
+<img src=".github/readme/showcase-dark.webp" width="100%" alt="Kıvılcım masaüstünde kenar çubuklu geniş düzenle, telefonda Bugün (görev yörüngesi), Macera ve Günü kapat ekranlarıyla.">
 
 <sub>Uygulamadan ekran görüntüleri, örnek veri.</sub>
 
@@ -38,10 +32,7 @@
 <table>
   <tr>
     <td width="300" valign="top">
-      <picture>
-        <source media="(prefers-color-scheme: dark)" srcset=".github/readme/dongu-dark.webp">
-        <img src=".github/readme/dongu-light.webp" width="280" alt="Kıvılcım'ın Bugün ekranı: görev baloncuklarına dokunuldukça Kıvı'nın çevresindeki halka doluyor, seri 38'den 39 güne çıkıyor; iki görev daha tiklenince halka dörtte üçe varıyor.">
-      </picture>
+      <img src=".github/readme/dongu-dark.webp" width="280" alt="Kıvılcım'ın Bugün ekranı: görev baloncuklarına dokunuldukça Kıvı'nın çevresindeki halka doluyor, seri 38'den 39 güne çıkıyor; iki görev daha tiklenince halka dörtte üçe varıyor.">
     </td>
     <td valign="top">
 

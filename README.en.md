@@ -1,33 +1,27 @@
 <p align="right">
-<a href="https://github.com/yigit2015/kivilcim-indir#readme"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/readme/btn-lang-tr-off-dark.png"><img src=".github/readme/btn-lang-tr-off-light.png" height="36" alt="Türkçe"></picture></a>
-<picture><source media="(prefers-color-scheme: dark)" srcset=".github/readme/btn-lang-en-on-dark.png"><img src=".github/readme/btn-lang-en-on-light.png" height="36" alt="English (this page)"></picture>
+<a href="https://github.com/yigit2015/kivilcim-indir#readme"><img src=".github/readme/btn-lang-tr-off-dark.png" height="36" alt="Türkçe"></a>
+<img src=".github/readme/btn-lang-en-on-dark.png" height="36" alt="English (this page)">
 </p>
 
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset=".github/readme/hero-dark-en.svg">
-  <img src=".github/readme/hero-light-en.svg" width="100%" alt="Kıvılcım: Small tasks, a growing flame. A free, gamified habit app.">
-</picture>
+<img src=".github/readme/hero-dark-en.svg" width="100%" alt="Kıvılcım: Small tasks, a growing flame. A free, gamified habit app.">
 
 <br>
 
-<a href="https://yigit2015.github.io/kivilcim-indir/en/#indir"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/readme/btn-download-dark.png"><img src=".github/readme/btn-download-light.png" height="44" alt="Download Kıvılcım"></picture></a>&nbsp;
-<a href="https://yigit2015.github.io/kivilcim-indir/uygulama/"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/readme/btn-web-en-dark.png"><img src=".github/readme/btn-web-en-light.png" height="44" alt="Try it in your browser"></picture></a>
+<a href="https://yigit2015.github.io/kivilcim-indir/en/#indir"><img src=".github/readme/btn-download-dark.png" height="44" alt="Download Kıvılcım"></a>&nbsp;
+<a href="https://yigit2015.github.io/kivilcim-indir/uygulama/"><img src=".github/readme/btn-web-en-dark.png" height="44" alt="Try it in your browser"></a>
 
-<a href="https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-windows-kurulum.exe"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/readme/btn-windows-dark.png"><img src=".github/readme/btn-windows-light.png" height="44" alt="Download for Windows (.exe)"></picture></a>&nbsp;
-<a href="https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-mac.dmg"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/readme/btn-mac-dark.png"><img src=".github/readme/btn-mac-light.png" height="44" alt="Download for Mac (.dmg)"></picture></a>&nbsp;
-<a href="https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-linux.AppImage"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/readme/btn-linux-dark.png"><img src=".github/readme/btn-linux-light.png" height="44" alt="Download for Linux (AppImage)"></picture></a>&nbsp;
-<a href="https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-android.apk"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/readme/btn-android-dark.png"><img src=".github/readme/btn-android-light.png" height="44" alt="Download for Android (.apk)"></picture></a>
+<a href="https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-windows-kurulum.exe"><img src=".github/readme/btn-windows-dark.png" height="44" alt="Download for Windows (.exe)"></a>&nbsp;
+<a href="https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-mac.dmg"><img src=".github/readme/btn-mac-dark.png" height="44" alt="Download for Mac (.dmg)"></a>&nbsp;
+<a href="https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-linux.AppImage"><img src=".github/readme/btn-linux-dark.png" height="44" alt="Download for Linux (AppImage)"></a>&nbsp;
+<a href="https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-android.apk"><img src=".github/readme/btn-android-dark.png" height="44" alt="Download for Android (.apk)"></a>
 
 <sub>No account · No ads · No purchases · iPhone version coming soon</sub>
 
 <br><br>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset=".github/readme/showcase-dark-en.webp">
-  <img src=".github/readme/showcase-light-en.webp" width="100%" alt="Kıvılcım on desktop with the wide sidebar layout, and on phone with the Today (task orbit), Adventure and Close the day screens.">
-</picture>
+<img src=".github/readme/showcase-dark-en.webp" width="100%" alt="Kıvılcım on desktop with the wide sidebar layout, and on phone with the Today (task orbit), Adventure and Close the day screens.">
 
 <sub>Screenshots from the app, sample data.</sub>
 
@@ -38,10 +32,7 @@
 <table>
   <tr>
     <td width="300" valign="top">
-      <picture>
-        <source media="(prefers-color-scheme: dark)" srcset=".github/readme/dongu-dark-en.webp">
-        <img src=".github/readme/dongu-light-en.webp" width="280" alt="Kıvılcım's Today screen: tapping task bubbles fills the ring around Kıvı and the streak goes from 38 to 39 days; two more check-offs and the ring reaches three quarters.">
-      </picture>
+      <img src=".github/readme/dongu-dark-en.webp" width="280" alt="Kıvılcım's Today screen: tapping task bubbles fills the ring around Kıvı and the streak goes from 38 to 39 days; two more check-offs and the ring reaches three quarters.">
     </td>
     <td valign="top">
 
