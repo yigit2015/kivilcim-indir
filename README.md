@@ -9,8 +9,8 @@
 
 <br>
 
-<a href="https://yigit2015.github.io/kivilcim-indir/#indir"><img src=".github/readme/btn-indir-dark.png" height="44" alt="Kıvılcım'ı indir"></a>&nbsp;
-<a href="https://yigit2015.github.io/kivilcim-indir/uygulama/"><img src=".github/readme/btn-web-dark.png" height="44" alt="Tarayıcıda dene"></a>
+<a href="https://kivilcimapp.com/#indir"><img src=".github/readme/btn-indir-dark.png" height="44" alt="Kıvılcım'ı indir"></a>&nbsp;
+<a href="https://kivilcimapp.com/uygulama/"><img src=".github/readme/btn-web-dark.png" height="44" alt="Tarayıcıda dene"></a>
 
 <a href="https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-windows-kurulum.exe"><img src=".github/readme/btn-windows-dark.png" height="44" alt="Windows için indir (.exe)"></a>&nbsp;
 <a href="https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-mac.dmg"><img src=".github/readme/btn-mac-dark.png" height="44" alt="Mac için indir (.dmg)"></a>&nbsp;
@@ -93,7 +93,7 @@ https://github.com/user-attachments/assets/8faaa3ea-f29c-4d0d-84ee-c61087552e53
   </tr>
 </table>
 
-Bütün özellikler ve hangisinin hangi cihazda çalıştığı: **[Özellikler](https://yigit2015.github.io/kivilcim-indir/ozellikler/)**
+Bütün özellikler ve hangisinin hangi cihazda çalıştığı: **[Özellikler](https://kivilcimapp.com/ozellikler/)**
 
 ## İndir
 
@@ -105,7 +105,7 @@ Bağlantılar hep son sürümü indirir. Güncelleme verini silmez.
 | Mac | [Kivilcim-mac.dmg](https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-mac.dmg) | Apple Silicon ve Intel |
 | Linux | [AppImage](https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-linux.AppImage) · [.deb](https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-linux.deb) | |
 | Android | [Kivilcim-android.apk](https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-android.apk) | Android 7 ve üstü |
-| iPhone | Yakında | O zamana kadar [web sürümü](https://yigit2015.github.io/kivilcim-indir/uygulama/) Safari'de çalışır |
+| iPhone | Yakında | O zamana kadar [web sürümü](https://kivilcimapp.com/uygulama/) Safari'de çalışır |
 
 <details>
 <summary><b>Kurulum notları</b></summary>
@@ -121,11 +121,11 @@ Bağlantılar hep son sürümü indirir. Güncelleme verini silmez.
 
 - **Hesap yok.** Uygulamayı açınca başlarsın; e-posta ya da şifre istenmez.
 - **Sunucu yok.** Görevlerin, serin ve notların cihazında kalır.
-- **Reklam ve izleme yok.** Ayrıntılar: [gizlilik politikası](https://yigit2015.github.io/kivilcim-indir/gizlilik/) · Sorular: [destek](https://yigit2015.github.io/kivilcim-indir/destek/)
+- **Reklam ve izleme yok.** Ayrıntılar: [gizlilik politikası](https://kivilcimapp.com/gizlilik/) · Sorular: [destek](https://kivilcimapp.com/destek/)
 
 ## Sürüm notları
 
-Her sürümde neyin değiştiği: [sürüm notları](https://yigit2015.github.io/kivilcim-indir/surumler/) · Önceki dosyalar: [Releases](https://github.com/yigit2015/kivilcim-indir/releases)
+Her sürümde neyin değiştiği: [sürüm notları](https://kivilcimapp.com/surumler/) · Önceki dosyalar: [Releases](https://github.com/yigit2015/kivilcim-indir/releases)
 
 <br>
 

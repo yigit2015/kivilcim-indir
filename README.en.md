@@ -9,8 +9,8 @@
 
 <br>
 
-<a href="https://yigit2015.github.io/kivilcim-indir/en/#indir"><img src=".github/readme/btn-download-dark.png" height="44" alt="Download Kıvılcım"></a>&nbsp;
-<a href="https://yigit2015.github.io/kivilcim-indir/uygulama/"><img src=".github/readme/btn-web-en-dark.png" height="44" alt="Try it in your browser"></a>
+<a href="https://kivilcimapp.com/en/#indir"><img src=".github/readme/btn-download-dark.png" height="44" alt="Download Kıvılcım"></a>&nbsp;
+<a href="https://kivilcimapp.com/uygulama/"><img src=".github/readme/btn-web-en-dark.png" height="44" alt="Try it in your browser"></a>
 
 <a href="https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-windows-kurulum.exe"><img src=".github/readme/btn-windows-dark.png" height="44" alt="Download for Windows (.exe)"></a>&nbsp;
 <a href="https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-mac.dmg"><img src=".github/readme/btn-mac-dark.png" height="44" alt="Download for Mac (.dmg)"></a>&nbsp;
@@ -93,7 +93,7 @@
   </tr>
 </table>
 
-Every feature and which device it works on: **[Features](https://yigit2015.github.io/kivilcim-indir/en/features/)**
+Every feature and which device it works on: **[Features](https://kivilcimapp.com/en/features/)**
 
 ## Download
 
@@ -105,7 +105,7 @@ Links always download the latest version. Updating doesn't delete your data.
 | Mac | [Kivilcim-mac.dmg](https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-mac.dmg) | Apple Silicon and Intel |
 | Linux | [AppImage](https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-linux.AppImage) · [.deb](https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-linux.deb) | |
 | Android | [Kivilcim-android.apk](https://github.com/yigit2015/kivilcim-indir/releases/latest/download/Kivilcim-android.apk) | Android 7 and later |
-| iPhone | Coming soon | Until then, the [web version](https://yigit2015.github.io/kivilcim-indir/uygulama/) works in Safari |
+| iPhone | Coming soon | Until then, the [web version](https://kivilcimapp.com/uygulama/) works in Safari |
 
 The app follows your device's language on first launch (English or Turkish); you can change it under Profile → "Appearance and accessibility" → "Dil · Language".
 
@@ -123,11 +123,11 @@ The app follows your device's language on first launch (English or Turkish); you
 
 - **No account.** Open the app and you're in; no email or password.
 - **No server.** Your tasks, streak and notes stay on your device.
-- **No ads or tracking.** Details: [privacy policy](https://yigit2015.github.io/kivilcim-indir/gizlilik/#english) · Questions: [support](https://yigit2015.github.io/kivilcim-indir/en/support/)
+- **No ads or tracking.** Details: [privacy policy](https://kivilcimapp.com/gizlilik/#english) · Questions: [support](https://kivilcimapp.com/en/support/)
 
 ## Release notes
 
-What changed in each version: [release notes](https://yigit2015.github.io/kivilcim-indir/en/releases/) · Earlier files: [Releases](https://github.com/yigit2015/kivilcim-indir/releases)
+What changed in each version: [release notes](https://kivilcimapp.com/en/releases/) · Earlier files: [Releases](https://github.com/yigit2015/kivilcim-indir/releases)
 
 <br>
 
