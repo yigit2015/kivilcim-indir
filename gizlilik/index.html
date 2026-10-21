@@ -58,7 +58,7 @@
     <div class="wrap">
       <h1>Gizlilik Politikası</h1>
       <p class="lead">Kişisel veri toplamıyoruz. Hesap yok, sunucu yok, ödeme yok; görevlerin, serilerin ve notların senin telefonunda (istersen kendi bulutunda) duruyor.</p>
-      <p class="meta-line">Son güncelleme: 21 Eylül 2026. Sürüm 2.1.0.</p>
+      <p class="meta-line">Son güncelleme: 21 Ekim 2026. iPhone, Android, web ve bilgisayar sürümleri için geçerlidir.</p>
       <dl class="nil">
         <div><dt>Toplanan kişisel veri</dt><dd>Yok</dd></div>
         <div><dt>Sunucumuza giden veri</dt><dd>Yok</dd></div>
@@ -108,12 +108,13 @@
               <tr><th scope="row">Bildirim</th><td>Kendi kurduğun hatırlatıcılar</td><td>Cihazda planlanır</td></tr>
               <tr><th scope="row">Alarm ve hatırlatıcı (Android)</th><td>Seçtiğin saatte dakikasında hatırlatmak</td><td>Cihazda planlanır</td></tr>
               <tr><th scope="row">Kamera</th><td>Arkadaş QR kodunu okutmak</td><td>Görüntü kaydedilmez</td></tr>
-              <tr><th scope="row">Mikrofon ve konuşma tanıma</th><td>Günlüğe konuşarak yazmak</td><td>Tanıma cihaz içinde, ses kaydedilmez</td></tr>
-              <tr><th scope="row">Fotoğraflar</th><td>Hayal panosuna görsel eklemek</td><td>Görsel cihazda kalır</td></tr>
+              <tr><th scope="row">Mikrofon ve konuşma tanıma</th><td>Günlüğe konuşarak yazmak</td><td>Ses kaydedilmez. Destekleyen telefonlarda tanıma cihaz içinde yapılır; desteklemeyen iPhone'larda konuşma, yazıya çevrilmek üzere Apple'ın konuşma hizmetine gider (Apple'ın gizlilik politikası geçerlidir), bize ulaşmaz</td></tr>
+              <tr><th scope="row">Fotoğraflar (Android)</th><td>Hayal panosuna görsel eklemek</td><td>Görsel cihazda kalır. iPhone'da izin istenmez, sistemin fotoğraf seçicisi kullanılır</td></tr>
               <tr><th scope="row">Konum (kullanırken)</th><td>Yere bağlı hatırlatıcılar</td><td>Cihazdan çıkmaz</td></tr>
-              <tr><th scope="row">Konum (arka planda)</th><td>Seçtiğin yere varınca hatırlatma</td><td>Cihazdan çıkmaz</td></tr>
+              <tr><th scope="row">Konum (arka planda, yalnız Android)</th><td>Seçtiğin yere varınca hatırlatma</td><td>Cihazdan çıkmaz. iPhone'da arka plan konumu istenmez; hatırlatmayı iOS kendisi tetikler</td></tr>
               <tr><th scope="row">Hareket</th><td>Adım görevlerini işaretlemek ve iPhone'da ana ekranda günün adımını göstermek</td><td>Cihazda kalır</td></tr>
-              <tr><th scope="row">Face ID / Touch ID</th><td>Uygulama kilidi</td><td>Biyometri iOS'ta kalır</td></tr>
+              <tr><th scope="row">NFC (iPhone)</th><td>Görev bağlantısını kendi NFC etiketine yazmak</td><td>Yalnız etikete yazılır, hiçbir şey okunmaz</td></tr>
+              <tr><th scope="row">Face ID / Touch ID / parmak izi</th><td>Uygulama kilidi</td><td>Biyometri işletim sisteminde kalır</td></tr>
             </tbody>
           </table>
         </div>
@@ -133,7 +134,7 @@
 
       <section id="cocuklar" aria-labelledby="cocuklar-b">
         <h2 id="cocuklar-b">Çocuklar</h2>
-        <p>Kıvılcım 4 yaş ve üzeri için uygundur. Çocuk modu açıkken mağaza, paylaşım ve dış bağlantılar kapanır; çıkmak için ebeveyn kapısı gerekir. Çocuklardan da hiçbir veri toplanmaz.</p>
+        <p>Kıvılcım 4 yaş ve üzeri için uygundur. Çocuk modu (iPhone'da çocuk profili) açıkken mağaza, paylaşım ve dış bağlantılar kapanır; çıkmak için ebeveyn kapısı gerekir. Çocuklardan da hiçbir veri toplanmaz.</p>
       </section>
 
       <section id="satin-alma" aria-labelledby="satin-alma-b">
@@ -143,7 +144,7 @@
 
       <section id="silme" aria-labelledby="silme-b">
         <h2 id="silme-b">Verilerini silme</h2>
-        <p>Profil&nbsp;→ “Gizlilik merkezi”&nbsp;→ “Her şeyi sil” tüm verilerini kalıcı olarak siler. Uygulamayı kaldırmak da telefondaki verileri siler; telefonunun Google ya da iCloud yedeğinde bir kopya varsa onu kendi hesap ayarlarından silebilirsin. Bizde bir kopya bulunmadığı için ayrıca bir silme talebi göndermene gerek yoktur.</p>
+        <p>Profil&nbsp;→ “Gizlilik merkezi”&nbsp;→ “Her şeyi sil” (iPhone'da Profil&nbsp;→ Ayarlar&nbsp;→ “Gizlilik merkezi”) tüm verilerini kalıcı olarak siler. Uygulamayı kaldırmak da telefondaki verileri siler; telefonunun Google ya da iCloud yedeğinde bir kopya varsa onu kendi hesap ayarlarından silebilirsin. Bizde bir kopya bulunmadığı için ayrıca bir silme talebi göndermene gerek yoktur.</p>
       </section>
 
       <section id="degisiklikler" aria-labelledby="degisiklikler-b">
@@ -165,7 +166,7 @@
           <details><summary>Telefon değiştiriyorum, verilerim gider mi?<svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-caret-down"/></svg></summary><p>Profil&nbsp;→ “Yedekle ve geri yükle”&nbsp;→ “Yedek dosyası oluştur ve paylaş” ile bir dosya oluştur, yeni telefonda aynı ekranda “Dosyadan seç” de. Bulut klasörü seçersen yedek kendiliğinden yazılır.</p></details>
           <details><summary>Serim yanlışlıkla söndü.<svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-caret-down"/></svg></summary><p>Seri kurtarma kartı ana ekranda çıkar: eksik günü tamamlayıp serini geri alabilirsin. Dondurucun varsa gün kendiliğinden korunur.</p></details>
           <details><summary>Bildirim gelmiyor.<svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-caret-down"/></svg></summary><p>Telefon ayarlarından Kıvılcım'a bildirim izni verildiğinden ve “Hatırlatıcılar” kanalının açık olduğundan emin ol. Odaklanma ya da rahatsız etmeyin modu bildirimleri erteler.</p></details>
-          <details><summary>Konum hatırlatıcısı çalışmıyor.<svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-caret-down"/></svg></summary><p>Yere bağlı hatırlatma arka plan konum izni ister. İzni “Her zaman” yapmadıysan uygulama kapalıyken hatırlatma gelmez.</p></details>
+          <details><summary>Konum hatırlatıcısı çalışmıyor.<svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-caret-down"/></svg></summary><p>iPhone'da “Kullanırken” izni yeter: hatırlatmayı iOS kendisi tetikler, uygulama kapalıyken de gelir. Android'de yere bağlı hatırlatma arka plan konum izni ister; izni “Her zaman” yapmadıysan uygulama kapalıyken hatırlatma gelmez.</p></details>
           <details><summary>Çocuk modundan nasıl çıkarım?<svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-caret-down"/></svg></summary><p>Ebeveyn kapısı: “Ebeveyn” düğmesine dokun ve ekrandaki basit toplama sorusunu çöz. Açılan panelde “Profil değiştir” bölümünden yetişkin profiline geç.</p></details>
           <details><summary>Verilerimi tamamen silmek istiyorum.<svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-caret-down"/></svg></summary><p>Profil&nbsp;→ “Gizlilik merkezi”&nbsp;→ “Her şeyi sil”. Onaylamak için kutuya SİL yaz. Geri alınamaz.</p></details>
         </div>
@@ -176,7 +177,7 @@
     <div class="lang-block" lang="en" id="english">
       <h2>Privacy Policy</h2>
       <p class="lead" style="margin-top:var(--s4)">We collect no personal data. No account, no server, no payments — your tasks, streaks and notes live on your phone (and, if you like, in your own cloud).</p>
-      <p class="meta-line">Last updated: 21 September 2026. Version 2.1.0.</p>
+      <p class="meta-line">Last updated: 21 October 2026. Applies to the iPhone, Android, web and desktop versions.</p>
       <dl class="nil">
         <div><dt>Personal data collected</dt><dd>None</dd></div>
         <div><dt>Data sent to our servers</dt><dd>None</dd></div>
@@ -221,12 +222,13 @@
               <tr><th scope="row">Notifications</th><td>Reminders you set yourself</td><td>Scheduled on device</td></tr>
               <tr><th scope="row">Alarms &amp; reminders (Android)</th><td>Reminding you at the exact minute you chose</td><td>Scheduled on device</td></tr>
               <tr><th scope="row">Camera</th><td>Scanning a friend's QR code</td><td>No image is stored</td></tr>
-              <tr><th scope="row">Microphone &amp; speech recognition</th><td>Dictating into the journal</td><td>Recognized on device, no audio stored</td></tr>
-              <tr><th scope="row">Photos</th><td>Adding an image to the vision board</td><td>Stays on device</td></tr>
+              <tr><th scope="row">Microphone &amp; speech recognition</th><td>Dictating into the journal</td><td>No audio is stored. On supported phones recognition runs on the device; on other iPhones your speech goes to Apple's speech service to be transcribed (Apple's privacy policy applies) and never reaches us</td></tr>
+              <tr><th scope="row">Photos (Android)</th><td>Adding an image to the vision board</td><td>Stays on device. On iPhone no permission is asked; the system photo picker is used</td></tr>
               <tr><th scope="row">Location (when in use)</th><td>Place-based reminders</td><td>Never leaves the device</td></tr>
-              <tr><th scope="row">Location (background)</th><td>Reminding you when you arrive somewhere you chose</td><td>Never leaves the device</td></tr>
+              <tr><th scope="row">Location (background, Android only)</th><td>Reminding you when you arrive somewhere you chose</td><td>Never leaves the device. On iPhone no background location is asked; iOS fires the reminder itself</td></tr>
               <tr><th scope="row">Motion</th><td>Auto-completing step tasks and, on iPhone, showing today's steps on the home screen</td><td>Stays on device</td></tr>
-              <tr><th scope="row">Face ID / Touch ID</th><td>App lock</td><td>Biometrics stay in iOS</td></tr>
+              <tr><th scope="row">NFC (iPhone)</th><td>Writing a task link to your own NFC tag</td><td>Only written to the tag, nothing is read</td></tr>
+              <tr><th scope="row">Face ID / Touch ID / fingerprint</th><td>App lock</td><td>Biometrics stay in the operating system</td></tr>
             </tbody>
           </table>
         </div>
@@ -246,7 +248,7 @@
 
       <section id="en-children" aria-labelledby="en-children-b">
         <h3 class="h2" id="en-children-b">Children</h3>
-        <p>Kıvılcım is suitable for ages 4 and up. In kid mode the shop, sharing and external links are disabled, and leaving requires a parent gate. No data is collected from children either.</p>
+        <p>Kıvılcım is suitable for ages 4 and up. In kid mode (a kid profile on iPhone) the shop, sharing and external links are disabled, and leaving requires a parent gate. No data is collected from children either.</p>
       </section>
 
       <section id="en-purchases" aria-labelledby="en-purchases-b">
@@ -256,7 +258,7 @@
 
       <section id="en-deleting" aria-labelledby="en-deleting-b">
         <h3 class="h2" id="en-deleting-b">Deleting your data</h3>
-        <p>Profile&nbsp;→ “Privacy center”&nbsp;→ “Erase everything” permanently deletes all your data. Uninstalling removes the data from your phone; if a copy exists in your phone’s Google or iCloud backup, you can delete it in your account settings. Since we hold no copy, there is no deletion request to send.</p>
+        <p>Profile&nbsp;→ “Privacy center”&nbsp;→ “Erase everything” (on iPhone, Profile&nbsp;→ Settings&nbsp;→ “Privacy center”) permanently deletes all your data. Uninstalling removes the data from your phone; if a copy exists in your phone’s Google or iCloud backup, you can delete it in your account settings. Since we hold no copy, there is no deletion request to send.</p>
       </section>
 
       <section id="en-changes" aria-labelledby="en-changes-b">
@@ -278,7 +280,7 @@
           <details><summary>I'm switching phones. Will I lose my data?<svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-caret-down"/></svg></summary><p>Profile&nbsp;→ “Back up and restore” creates a backup file; on the new phone, restore it from the same screen. If you pick a cloud folder, backups are written automatically.</p></details>
           <details><summary>My streak went out by mistake.<svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-caret-down"/></svg></summary><p>A streak recovery card appears on the home screen: complete the missing day to win your streak back. If you have a freeze, the day is protected automatically.</p></details>
           <details><summary>Notifications don't arrive.<svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-caret-down"/></svg></summary><p>Check that Kıvılcım has notification permission in your phone's settings and that the “Reminders” channel (“Hatırlatıcılar” if the app is in Turkish) is on. Focus or Do Not Disturb modes delay notifications.</p></details>
-          <details><summary>Location reminders don't work.<svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-caret-down"/></svg></summary><p>Place-based reminders need background location permission. Unless it is set to “Always”, no reminder arrives while the app is closed.</p></details>
+          <details><summary>Location reminders don't work.<svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-caret-down"/></svg></summary><p>On iPhone, “While Using” permission is enough: iOS fires the reminder itself, even when the app is closed. On Android, place-based reminders need background location permission; unless it is set to “Always”, no reminder arrives while the app is closed.</p></details>
           <details><summary>How do I leave kid mode?<svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-caret-down"/></svg></summary><p>Parent gate: tap “Parent” and solve the simple addition question on screen. In the panel that opens, switch to an adult profile under “Switch profile”.</p></details>
           <details><summary>I want to delete all my data.<svg class="ico" aria-hidden="true"><use href="../assets/img/ikonlar.svg#i-caret-down"/></svg></summary><p>Profile&nbsp;→ “Privacy center”&nbsp;→ “Erase everything”; type DELETE in the box (SİL if the app is in Turkish) to confirm. This cannot be undone.</p></details>
         </div>
