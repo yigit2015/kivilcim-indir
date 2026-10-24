@@ -622,9 +622,13 @@ class Component extends DCLogic {
         }
       });
     };
+    // also on plain scroll, so a fast jump never leaves a card at "00"
+    let pend = false;
+    this.on(window, 'scroll', () => { if (pend) return; pend = true; requestAnimationFrame(() => { pend = false; checkCards(); }); }, { passive: true });
     gsap.to(row, {
       x: () => -Math.max(0, row.offsetWidth - window.innerWidth),
       ease: 'none',
+      onUpdate: checkCards, // the scrub keeps moving after the scroll stops
       scrollTrigger: { trigger: '.feat', start: 'top top', end: 'bottom bottom', scrub: 1, invalidateOnRefresh: true, onUpdate: checkCards, onEnter: checkCards }
     });
     window.ScrollTrigger.create({
