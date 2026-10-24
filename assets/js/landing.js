@@ -1,6 +1,7 @@
 /* Kıvılcım ana sayfa — hareket ve etkileşim. GSAP + ScrollTrigger + Lenis. */
 (function () {
 'use strict';
+var KV_ASSETS = (function () { var s = document.querySelector('script[src*="landing.js"]'); return s ? s.src.replace(/js\/landing\.js.*$/, '') : 'assets/'; })();
 class DCLogic { constructor() { this.props = {"emberCount":70,"grain":true}; } }
 /* ============================================================
    Kıvılcım landing — motion + interaction engine
@@ -279,14 +280,16 @@ class Component extends DCLogic {
 
   /* ---------- TR / EN ---------- */
   initLang() {
-    this.$$('[data-en]').forEach((el) => { el.dataset.tr = el.textContent; });
-    this.$$('[data-en-label]').forEach((el) => { el.dataset.trLabel = el.getAttribute('aria-label') || ''; });
-    this.$$('[data-en-alt]').forEach((el) => { el.dataset.trAlt = el.getAttribute('alt') || ''; });
-    this.$$('[data-en-href]').forEach((el) => { el.dataset.trHref = el.getAttribute('href') || ''; });
+    // a page built in English already carries data-tr (the Turkish originals)
+    this.$$('[data-en]').forEach((el) => { if (el.dataset.tr == null) el.dataset.tr = el.textContent; });
+    this.$$('[data-en-label]').forEach((el) => { if (el.dataset.trLabel == null) el.dataset.trLabel = el.getAttribute('aria-label') || ''; });
+    this.$$('[data-en-alt]').forEach((el) => { if (el.dataset.trAlt == null) el.dataset.trAlt = el.getAttribute('alt') || ''; });
+    this.$$('[data-en-href]').forEach((el) => { if (el.dataset.trHref == null) el.dataset.trHref = el.getAttribute('href') || ''; });
     let saved = null;
     try { saved = window.localStorage.getItem('kivilcim-site-lang'); } catch (e) {}
     const nav = (navigator.language || 'tr').toLowerCase();
-    this.setLang(saved === 'en' || saved === 'tr' ? saved : (nav.indexOf('tr') === 0 ? 'tr' : 'en'), false);
+    const forced = window.KV_LANG; // /en/ opens in English
+    this.setLang(forced === 'en' || forced === 'tr' ? forced : (saved === 'en' || saved === 'tr' ? saved : (nav.indexOf('tr') === 0 ? 'tr' : 'en')), false);
     this.on(this.$('.pill--lang'), 'click', () => {
       this.setLang(this.lang === 'en' ? 'tr' : 'en', true);
       if (window.ScrollTrigger && this.motion) window.ScrollTrigger.refresh();
@@ -348,7 +351,7 @@ class Component extends DCLogic {
 
   /* ---------- video: fetched as a blob so seeking works everywhere ---------- */
   loadVideo() {
-    const SRC = 'assets/video/kivilcim-hero.mp4';
+    const SRC = KV_ASSETS + 'video/kivilcim-hero.mp4';
     const v = this.$('.hero__video');
     if (!v) return;
     this.video = v;
