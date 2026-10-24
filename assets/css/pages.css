@@ -118,7 +118,7 @@ html:not([data-motion="calm"]) .page-kivi img{animation:kvBreath 3.4s ease-in-ou
 /* ── Alt bilgi: dev KIVILCIM yazısı ── */
 .foot{background:transparent;border-top:1px solid var(--line);padding-top:clamp(48px,7vw,96px)}
 .foot__mark{display:flex;justify-content:center;overflow:hidden;margin:0 0 clamp(24px,4vw,48px);font:900 clamp(56px,18vw,320px)/.84 var(--font-display);letter-spacing:-.065em;padding:.04em 0 .02em;max-width:none}
-.foot__mark span{display:inline-block;background:linear-gradient(180deg,#F5F5F5 25%,rgba(245,245,245,.12) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.foot__mark span{display:inline-block;padding-right:.12em;margin-right:-.12em;background:linear-gradient(180deg,#F5F5F5 25%,rgba(245,245,245,.12) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 
 /* ── Efekt katmanları (pages.js ekler) ── */
 .kv-progress{position:fixed;top:0;left:0;right:0;height:3px;z-index:70;transform-origin:0 50%;transform:scaleX(0);pointer-events:none;
