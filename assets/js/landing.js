@@ -208,7 +208,6 @@ class Component extends DCLogic {
 
     this.setVh(tall);
     this.safe('lang', this.initLang);
-    this.safe('theme', this.initTheme);
     this.safe('menu', this.initMenu);
     this.safe('video', this.loadVideo);
 
@@ -310,33 +309,6 @@ class Component extends DCLogic {
   }
 
   onLang(f) { this._langHooks.push(f); }
-
-  /* ---------- light / dark (same key as the other kivilcimapp.com pages) ---------- */
-  initTheme() {
-    const btn = this.$('.theme-btn');
-    let t = null;
-    try { t = window.localStorage.getItem('kivilcim-site-theme'); } catch (e) {}
-    if (t !== 'light' && t !== 'dark') t = document.documentElement.getAttribute('data-theme');
-    if (t !== 'light' && t !== 'dark') t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-    this.setTheme(t, false);
-    this.on(btn, 'click', () => {
-      this.setTheme(this.theme === 'light' ? 'dark' : 'light', true);
-      const r = btn.getBoundingClientRect();
-      this.burst(r.left + r.width / 2, r.top + r.height / 2, 18, 0.6);
-    });
-    this.onLang(() => this.setTheme(this.theme, false));
-  }
-
-  setTheme(t, save) {
-    this.theme = t;
-    this.r.setAttribute('data-theme', t);
-    document.documentElement.setAttribute('data-theme', t);
-    const meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.setAttribute('content', t === 'light' ? '#F6F2EC' : '#141414');
-    const btn = this.$('.theme-btn');
-    if (btn) btn.setAttribute('aria-label', t === 'light' ? this.t('Koyu temaya geç', 'Switch to dark theme') : this.t('Açık temaya geç', 'Switch to light theme'));
-    if (save) { try { window.localStorage.setItem('kivilcim-site-theme', t); } catch (e) {} }
-  }
 
   /* ---------- small-screen menu ---------- */
   initMenu() {
